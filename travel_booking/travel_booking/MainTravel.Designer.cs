@@ -1,6 +1,6 @@
 ﻿namespace travel_booking
 {
-    partial class Form1
+    partial class MainTravel
     {
         /// <summary>
         /// Required designer variable.
