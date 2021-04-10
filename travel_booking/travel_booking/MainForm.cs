@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace travel_booking
 {
-    public partial class MainTravel : Form
+    public partial class MainForm : Form
     {
-        public MainTravel()
+        public MainForm()
         {
             InitializeComponent();
         }

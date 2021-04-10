@@ -16,7 +16,7 @@ namespace travel_booking
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainTravel());
+            Application.Run(new MainForm());
         }
     }
 }
