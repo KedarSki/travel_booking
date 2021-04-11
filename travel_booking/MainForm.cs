@@ -23,9 +23,9 @@ namespace travel_booking
         {
             return new List<Employee>()
             {
-                new Employee(1, "Radosław", "Zamojski"),
-                new Employee(2, "Patryk", "Henrykowski"),
-                new Employee(3, "Halina", "Frąckowiak")
+                new Employee(1, "Radosław", "Zamojski", 1988),
+                new Employee(2, "Patryk", "Henrykowski", 2000),
+                new Employee(3, "Halina", "Frąckowiak", 1995)
 
             };
         }

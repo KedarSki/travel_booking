@@ -8,11 +8,12 @@ namespace travel_booking.Models
 {
     public class Employee
     {
-        public Employee(int id, string firstName, string lastName)
+        public Employee(int id, string firstName, string lastName, int yearOfBirth)
         {
             Id = id;
             FirstName = firstName;
             LastName = lastName;
+            Login = $"{firstName}.{lastName}.{yearOfBirth}";
             Password = "112233";
             LoggedIn = false;
         }
@@ -20,6 +21,8 @@ namespace travel_booking.Models
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public int YearOfBirth { get; set; }
+        public string Login { get; set; }
         public string Password { get; set; }
         public bool LoggedIn { get; set; }
         public string FullName
@@ -32,7 +35,7 @@ namespace travel_booking.Models
                     return "";
             }
         }
-    
+
 
     }
 }
