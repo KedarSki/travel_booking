@@ -17,6 +17,7 @@ namespace travel_booking
         {
             InitializeComponent();
             GetEmployees();
+            GetCustomers();
         }
 
         private List<Employee> GetEmployees()
@@ -27,6 +28,14 @@ namespace travel_booking
                 new Employee(2, "Patryk", "Henrykowski", 2000),
                 new Employee(3, "Halina", "Frąckowiak", 1995)
 
+            };
+        }
+
+        private List<Customer> GetCustomers()
+        {
+            return new List<Customer>()
+            {
+                
             };
         }
 
