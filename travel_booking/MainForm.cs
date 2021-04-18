@@ -15,10 +15,12 @@ namespace travel_booking
     {
         public MainForm()
         {
-            InitializeComponent();
+
             GetEmployees();
             GetCustomers();
         }
+
+    
 
         private List<Employee> GetEmployees()
         {
