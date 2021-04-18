@@ -24,9 +24,10 @@ namespace travel_booking
         {
             return new List<Employee>()
             {
-                new Employee(1, "Radosław", "Zamojski", 1988),
-                new Employee(2, "Patryk", "Henrykowski", 2000),
-                new Employee(3, "Halina", "Frąckowiak", 1995)
+                new Employee(1, "Kamil", "Nowak", "kamil.nowak@eagletravel.pl", 1988),
+                new Employee(2, "Patryk", "Henrykowski", "patryk.henrykowski@eagletravel.pl", 2000),
+                new Employee(3, "Halina", "Frąckowiak", "halina.frackowiak@eagletravel.pl", 1995)
+
 
             };
         }
@@ -39,6 +40,10 @@ namespace travel_booking
             };
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
