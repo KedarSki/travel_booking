@@ -8,7 +8,7 @@ namespace travel_booking.Models
 {
     public class Employee
     {
-        public Employee(int id, string firstName, string lastName, string email, int yearOfBirth)
+        public Employee(int id, string firstName, string lastName, string email)
         {
             Id = id;
             FirstName = firstName;
@@ -21,7 +21,6 @@ namespace travel_booking.Models
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int YearOfBirth { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public bool LoggedIn { get; set; }
