@@ -34,8 +34,6 @@ namespace travel_booking.Models
                     return "";
             }
         }
-
-
     }
 }
     

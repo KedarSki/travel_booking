@@ -22,7 +22,7 @@ namespace travel_booking
             GetEmployees();
             GetCustomers();
             InitializeComponent();
-          
+           
         }
 
         
@@ -36,11 +36,8 @@ namespace travel_booking
                 new Employee(2, "Patryk", "Henrykowski", "patryk.henrykowski@travelbooking.com"),
                 new Employee(3, "Halina", "Frąckowiak", "halina.frackowiak@travelbooking.com")
 
-
             };
         }
-
-
 
         private List<Customer> GetCustomers()
         {
@@ -49,7 +46,6 @@ namespace travel_booking
                 
             };
         }
-
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
