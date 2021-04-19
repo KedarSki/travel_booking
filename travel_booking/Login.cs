@@ -35,5 +35,19 @@ namespace travel_booking
         {
             
         }
+
+        private void ClearAll_Click(object sender, EventArgs e)
+        {
+     
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+        
+            Register register = new Register();
+            register.Show();
+            this.Hide();
+        }
     }
-}
+    }
+

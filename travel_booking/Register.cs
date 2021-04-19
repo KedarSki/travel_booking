@@ -34,14 +34,14 @@ namespace travel_booking
                 sqlCommand.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show($"You have been registered!. You can now log in");
-                ClearAll();
+               
 
             }
 
             
         }
 
-        private void ClearAll()
+        private void ClearAll_Click(object sender, EventArgs e)
         {
             txtFirstName.Text = "";
             txtLastName.Text = "";
@@ -49,7 +49,7 @@ namespace travel_booking
             txtPhone.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
+            
         }
- 
     }
 }

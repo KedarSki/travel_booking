@@ -14,6 +14,7 @@ namespace travel_booking
     public partial class MainForm : Form
     {
         private Login login1;
+        private Register register1;
         private PictureBox pictureBox1;
 
         public MainForm()
@@ -51,6 +52,7 @@ namespace travel_booking
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.login1 = new travel_booking.Login();
+            this.register1 = new travel_booking.Register();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,16 +70,24 @@ namespace travel_booking
             // login1
             // 
             this.login1.BackColor = System.Drawing.Color.Black;
-            this.login1.Location = new System.Drawing.Point(323, 12);
+            this.login1.Location = new System.Drawing.Point(155, 515);
             this.login1.Name = "login1";
             this.login1.Size = new System.Drawing.Size(329, 486);
             this.login1.TabIndex = 1;
-          
+            // 
+            // register1
+            // 
+            this.register1.BackColor = System.Drawing.Color.Black;
+            this.register1.Location = new System.Drawing.Point(2, 12);
+            this.register1.Name = "register1";
+            this.register1.Size = new System.Drawing.Size(980, 654);
+            this.register1.TabIndex = 2;
             // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(980, 570);
+            this.ClientSize = new System.Drawing.Size(980, 670);
+            this.Controls.Add(this.register1);
             this.Controls.Add(this.login1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -39,7 +39,7 @@ namespace travel_booking
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.RegisterButton = new System.Windows.Forms.Button();
-            this.clearAll = new System.Windows.Forms.Label();
+            this.ClearAll = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -141,17 +141,19 @@ namespace travel_booking
             this.RegisterButton.TabIndex = 12;
             this.RegisterButton.Text = "REGISTER";
             this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
-            // clearAll
+            // ClearAll
             // 
-            this.clearAll.AutoSize = true;
-            this.clearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.clearAll.ForeColor = System.Drawing.Color.Green;
-            this.clearAll.Location = new System.Drawing.Point(193, 307);
-            this.clearAll.Name = "clearAll";
-            this.clearAll.Size = new System.Drawing.Size(67, 16);
-            this.clearAll.TabIndex = 13;
-            this.clearAll.Text = "Clear All";
+            this.ClearAll.AutoSize = true;
+            this.ClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ClearAll.ForeColor = System.Drawing.Color.Green;
+            this.ClearAll.Location = new System.Drawing.Point(193, 307);
+            this.ClearAll.Name = "ClearAll";
+            this.ClearAll.Size = new System.Drawing.Size(67, 16);
+            this.ClearAll.TabIndex = 13;
+            this.ClearAll.Text = "Clear All";
+            this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
             // 
             // Exit
             // 
@@ -201,7 +203,7 @@ namespace travel_booking
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.Exit);
-            this.Controls.Add(this.clearAll);
+            this.Controls.Add(this.ClearAll);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
@@ -238,7 +240,7 @@ namespace travel_booking
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button RegisterButton;
-        private System.Windows.Forms.Label clearAll;
+        private System.Windows.Forms.Label ClearAll;
         private System.Windows.Forms.Label Exit;
         private EventHandler loginButton_Click;
     }
