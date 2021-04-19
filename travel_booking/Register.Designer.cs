@@ -1,4 +1,6 @@
-﻿namespace travel_booking
+﻿using System;
+
+namespace travel_booking
 {
     partial class Register
     {
@@ -28,11 +30,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Exit = new System.Windows.Forms.Label();
             this.ClearAll = new System.Windows.Forms.Label();
             this.RegisterButton = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUserEmail = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.or = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,37 +42,43 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textRepetPassword = new System.Windows.Forms.TextBox();
+            this.textConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Exit2 = new System.Windows.Forms.Label();
+            this.Exit = new System.Windows.Forms.Label();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.txtDateOfBirth = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Exit
-            // 
-            this.Exit.AutoSize = true;
-            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Exit.ForeColor = System.Drawing.Color.Green;
-            this.Exit.Location = new System.Drawing.Point(232, 526);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(33, 16);
-            this.Exit.TabIndex = 40;
-            this.Exit.Text = "Exit";
             // 
             // ClearAll
             // 
             this.ClearAll.AutoSize = true;
             this.ClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ClearAll.ForeColor = System.Drawing.Color.Green;
-            this.ClearAll.Location = new System.Drawing.Point(203, 332);
+            this.ClearAll.Location = new System.Drawing.Point(289, 493);
             this.ClearAll.Name = "ClearAll";
             this.ClearAll.Size = new System.Drawing.Size(67, 16);
             this.ClearAll.TabIndex = 39;
             this.ClearAll.Text = "Clear All";
+            this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
             // 
             // RegisterButton
             // 
@@ -81,7 +88,7 @@
             this.RegisterButton.FlatAppearance.BorderSize = 0;
             this.RegisterButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RegisterButton.ForeColor = System.Drawing.Color.Black;
-            this.RegisterButton.Location = new System.Drawing.Point(34, 358);
+            this.RegisterButton.Location = new System.Drawing.Point(120, 516);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(236, 37);
             this.RegisterButton.TabIndex = 38;
@@ -94,31 +101,31 @@
             this.txtPassword.BackColor = System.Drawing.Color.Black;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.ForeColor = System.Drawing.Color.Gold;
-            this.txtPassword.Location = new System.Drawing.Point(65, 232);
+            this.txtPassword.Location = new System.Drawing.Point(151, 403);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(205, 25);
             this.txtPassword.TabIndex = 37;
             this.txtPassword.Text = "Password";
             // 
-            // txtUserEmail
+            // txtEmail
             // 
-            this.txtUserEmail.BackColor = System.Drawing.Color.Black;
-            this.txtUserEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserEmail.ForeColor = System.Drawing.Color.Gold;
-            this.txtUserEmail.Location = new System.Drawing.Point(65, 165);
-            this.txtUserEmail.Multiline = true;
-            this.txtUserEmail.Name = "txtUserEmail";
-            this.txtUserEmail.Size = new System.Drawing.Size(205, 25);
-            this.txtUserEmail.TabIndex = 36;
-            this.txtUserEmail.Text = "Email";
+            this.txtEmail.BackColor = System.Drawing.Color.Black;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.ForeColor = System.Drawing.Color.Gold;
+            this.txtEmail.Location = new System.Drawing.Point(151, 353);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(205, 25);
+            this.txtEmail.TabIndex = 36;
+            this.txtEmail.Text = "Email";
             // 
             // or
             // 
             this.or.AutoSize = true;
             this.or.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.or.ForeColor = System.Drawing.Color.Green;
-            this.or.Location = new System.Drawing.Point(140, 398);
+            this.or.Location = new System.Drawing.Point(226, 556);
             this.or.Name = "or";
             this.or.Size = new System.Drawing.Size(30, 16);
             this.or.TabIndex = 35;
@@ -132,7 +139,7 @@
             this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LoginButton.ForeColor = System.Drawing.Color.Black;
-            this.LoginButton.Location = new System.Drawing.Point(34, 417);
+            this.LoginButton.Location = new System.Drawing.Point(120, 575);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(236, 37);
             this.LoginButton.TabIndex = 34;
@@ -142,7 +149,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
-            this.panel2.Location = new System.Drawing.Point(34, 263);
+            this.panel2.Location = new System.Drawing.Point(120, 434);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 1);
             this.panel2.TabIndex = 33;
@@ -150,7 +157,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Green;
-            this.panel1.Location = new System.Drawing.Point(34, 196);
+            this.panel1.Location = new System.Drawing.Point(120, 384);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 32;
@@ -160,7 +167,7 @@
             this.Registerlabel.AutoSize = true;
             this.Registerlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Registerlabel.ForeColor = System.Drawing.Color.Green;
-            this.Registerlabel.Location = new System.Drawing.Point(69, 103);
+            this.Registerlabel.Location = new System.Drawing.Point(155, 93);
             this.Registerlabel.Name = "Registerlabel";
             this.Registerlabel.Size = new System.Drawing.Size(185, 37);
             this.Registerlabel.TabIndex = 29;
@@ -169,7 +176,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::travel_booking.Properties.Resources.password;
-            this.pictureBox3.Location = new System.Drawing.Point(34, 232);
+            this.pictureBox3.Location = new System.Drawing.Point(120, 403);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +186,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::travel_booking.Properties.Resources.loginPicture;
-            this.pictureBox2.Location = new System.Drawing.Point(34, 165);
+            this.pictureBox2.Location = new System.Drawing.Point(120, 353);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -189,29 +196,29 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::travel_booking.Properties.Resources.travelIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(191, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
-            // textRepetPassword
+            // textConfirmPassword
             // 
-            this.textRepetPassword.BackColor = System.Drawing.Color.Black;
-            this.textRepetPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textRepetPassword.ForeColor = System.Drawing.Color.Gold;
-            this.textRepetPassword.Location = new System.Drawing.Point(65, 297);
-            this.textRepetPassword.Multiline = true;
-            this.textRepetPassword.Name = "textRepetPassword";
-            this.textRepetPassword.Size = new System.Drawing.Size(205, 25);
-            this.textRepetPassword.TabIndex = 43;
-            this.textRepetPassword.Text = "Confirm Password";
+            this.textConfirmPassword.BackColor = System.Drawing.Color.Black;
+            this.textConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textConfirmPassword.ForeColor = System.Drawing.Color.Gold;
+            this.textConfirmPassword.Location = new System.Drawing.Point(151, 459);
+            this.textConfirmPassword.Multiline = true;
+            this.textConfirmPassword.Name = "textConfirmPassword";
+            this.textConfirmPassword.Size = new System.Drawing.Size(205, 25);
+            this.textConfirmPassword.TabIndex = 43;
+            this.textConfirmPassword.Text = "Confirm Password";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
-            this.panel3.Location = new System.Drawing.Point(34, 328);
+            this.panel3.Location = new System.Drawing.Point(120, 490);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 1);
             this.panel3.TabIndex = 42;
@@ -219,38 +226,169 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::travel_booking.Properties.Resources.password;
-            this.pictureBox4.Location = new System.Drawing.Point(34, 297);
+            this.pictureBox4.Location = new System.Drawing.Point(120, 459);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(25, 25);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 41;
             this.pictureBox4.TabStop = false;
             // 
-            // Exit2
+            // Exit
             // 
-            this.Exit2.AutoSize = true;
-            this.Exit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Exit2.ForeColor = System.Drawing.Color.Green;
-            this.Exit2.Location = new System.Drawing.Point(137, 457);
-            this.Exit2.Name = "Exit2";
-            this.Exit2.Size = new System.Drawing.Size(33, 16);
-            this.Exit2.TabIndex = 44;
-            this.Exit2.Text = "Exit";
+            this.Exit.AutoSize = true;
+            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Exit.ForeColor = System.Drawing.Color.Green;
+            this.Exit.Location = new System.Drawing.Point(223, 615);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(33, 16);
+            this.Exit.TabIndex = 44;
+            this.Exit.Text = "Exit";
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.BackColor = System.Drawing.Color.Black;
+            this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFirstName.ForeColor = System.Drawing.Color.Gold;
+            this.txtFirstName.Location = new System.Drawing.Point(151, 158);
+            this.txtFirstName.Multiline = true;
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(205, 25);
+            this.txtFirstName.TabIndex = 47;
+            this.txtFirstName.Text = "First Name";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Green;
+            this.panel4.Location = new System.Drawing.Point(120, 189);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(236, 1);
+            this.panel4.TabIndex = 46;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::travel_booking.Properties.Resources.loginPicture;
+            this.pictureBox5.Location = new System.Drawing.Point(120, 158);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 45;
+            this.pictureBox5.TabStop = false;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.BackColor = System.Drawing.Color.Black;
+            this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLastName.ForeColor = System.Drawing.Color.Gold;
+            this.txtLastName.Location = new System.Drawing.Point(151, 208);
+            this.txtLastName.Multiline = true;
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(205, 25);
+            this.txtLastName.TabIndex = 50;
+            this.txtLastName.Text = "Last Name";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Green;
+            this.panel5.Location = new System.Drawing.Point(120, 239);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(236, 1);
+            this.panel5.TabIndex = 49;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::travel_booking.Properties.Resources.loginPicture;
+            this.pictureBox6.Location = new System.Drawing.Point(120, 208);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.BackColor = System.Drawing.Color.Black;
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhone.ForeColor = System.Drawing.Color.Gold;
+            this.txtPhone.Location = new System.Drawing.Point(151, 305);
+            this.txtPhone.Multiline = true;
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(205, 25);
+            this.txtPhone.TabIndex = 56;
+            this.txtPhone.Text = "Phone Number";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Green;
+            this.panel6.Location = new System.Drawing.Point(120, 336);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(236, 1);
+            this.panel6.TabIndex = 55;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::travel_booking.Properties.Resources.loginPicture;
+            this.pictureBox7.Location = new System.Drawing.Point(120, 305);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 54;
+            this.pictureBox7.TabStop = false;
+            // 
+            // txtDateOfBirth
+            // 
+            this.txtDateOfBirth.BackColor = System.Drawing.Color.Black;
+            this.txtDateOfBirth.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDateOfBirth.ForeColor = System.Drawing.Color.Gold;
+            this.txtDateOfBirth.Location = new System.Drawing.Point(151, 258);
+            this.txtDateOfBirth.Multiline = true;
+            this.txtDateOfBirth.Name = "txtDateOfBirth";
+            this.txtDateOfBirth.Size = new System.Drawing.Size(205, 25);
+            this.txtDateOfBirth.TabIndex = 53;
+            this.txtDateOfBirth.Text = "Date Of Birth";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Green;
+            this.panel7.Location = new System.Drawing.Point(120, 289);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(236, 1);
+            this.panel7.TabIndex = 52;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::travel_booking.Properties.Resources.loginPicture;
+            this.pictureBox8.Location = new System.Drawing.Point(120, 258);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 51;
+            this.pictureBox8.TabStop = false;
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.Exit2);
-            this.Controls.Add(this.textRepetPassword);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.txtDateOfBirth);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.Exit);
+            this.Controls.Add(this.textConfirmPassword);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.Exit);
             this.Controls.Add(this.ClearAll);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUserEmail);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.or);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.panel2);
@@ -260,23 +398,25 @@
             this.Controls.Add(this.Registerlabel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Register";
-            this.Size = new System.Drawing.Size(308, 486);
+            this.Size = new System.Drawing.Size(504, 650);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label Exit;
         private System.Windows.Forms.Label ClearAll;
         private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUserEmail;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label or;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Panel panel2;
@@ -285,9 +425,22 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Registerlabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textRepetPassword;
+        private System.Windows.Forms.TextBox textConfirmPassword;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label Exit2;
+        private System.Windows.Forms.Label Exit;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TextBox txtDateOfBirth;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private EventHandler ClearAll_Click;
     }
 }

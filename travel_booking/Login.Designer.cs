@@ -36,10 +36,10 @@ namespace travel_booking
             this.panel2 = new System.Windows.Forms.Panel();
             this.LoginButton = new System.Windows.Forms.Button();
             this.or = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.RegisterButton = new System.Windows.Forms.Button();
-            this.ClearAll = new System.Windows.Forms.Label();
+            this.clearAll = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -103,17 +103,17 @@ namespace travel_booking
             this.or.TabIndex = 8;
             this.or.Text = "OR";
             // 
-            // txtUserName
+            // txtEmail
             // 
-            this.txtUserName.BackColor = System.Drawing.Color.Black;
-            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.ForeColor = System.Drawing.Color.Gold;
-            this.txtUserName.Location = new System.Drawing.Point(64, 188);
-            this.txtUserName.Multiline = true;
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(205, 25);
-            this.txtUserName.TabIndex = 10;
-            this.txtUserName.Text = "Email";
+            this.txtEmail.BackColor = System.Drawing.Color.Black;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.ForeColor = System.Drawing.Color.Gold;
+            this.txtEmail.Location = new System.Drawing.Point(64, 188);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(205, 25);
+            this.txtEmail.TabIndex = 10;
+            this.txtEmail.Text = "Email";
             // 
             // txtPassword
             // 
@@ -142,16 +142,16 @@ namespace travel_booking
             this.RegisterButton.Text = "REGISTER";
             this.RegisterButton.UseVisualStyleBackColor = false;
             // 
-            // ClearAll
+            // clearAll
             // 
-            this.ClearAll.AutoSize = true;
-            this.ClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ClearAll.ForeColor = System.Drawing.Color.Green;
-            this.ClearAll.Location = new System.Drawing.Point(193, 307);
-            this.ClearAll.Name = "ClearAll";
-            this.ClearAll.Size = new System.Drawing.Size(67, 16);
-            this.ClearAll.TabIndex = 13;
-            this.ClearAll.Text = "Clear All";
+            this.clearAll.AutoSize = true;
+            this.clearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.clearAll.ForeColor = System.Drawing.Color.Green;
+            this.clearAll.Location = new System.Drawing.Point(193, 307);
+            this.clearAll.Name = "clearAll";
+            this.clearAll.Size = new System.Drawing.Size(67, 16);
+            this.clearAll.TabIndex = 13;
+            this.clearAll.Text = "Clear All";
             // 
             // Exit
             // 
@@ -201,10 +201,10 @@ namespace travel_booking
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.Exit);
-            this.Controls.Add(this.ClearAll);
+            this.Controls.Add(this.clearAll);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.or);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.panel2);
@@ -235,10 +235,10 @@ namespace travel_booking
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label or;
-        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button RegisterButton;
-        private System.Windows.Forms.Label ClearAll;
+        private System.Windows.Forms.Label clearAll;
         private System.Windows.Forms.Label Exit;
         private EventHandler loginButton_Click;
     }
