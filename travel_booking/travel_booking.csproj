@@ -49,24 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Andrzej\frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Andrzej\frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Andrzej\ucMain.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Andrzej\ucMain.Designer.cs">
-      <DependentUpon>ucMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Andrzej\ucRegister.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Andrzej\ucRegister.Designer.cs">
-      <DependentUpon>ucRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,15 +74,6 @@
     <Compile Include="UserControlers\UserContrMain.Designer.cs">
       <DependentUpon>UserContrMain.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Andrzej\frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Andrzej\ucMain.resx">
-      <DependentUpon>ucMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Andrzej\ucRegister.resx">
-      <DependentUpon>ucRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

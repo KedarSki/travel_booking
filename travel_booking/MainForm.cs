@@ -14,30 +14,35 @@ namespace travel_booking
 {
     public partial class MainForm : Form
     {
-        private Login login1;
-        private UserContrRegister register1;
-        private PictureBox pictureBox1;
+
 
         UserContrMain userContrMain;
+        UserContrRegister userContrRegister;
         public MainForm()
         {
             InitializeComponent();
+            GeneratePanels();
           
         }
 
-
-        private List<Employee> GetEmployees()
+        void GeneratePanels ()
         {
-            return null;
+            userContrMain = new UserContrMain();
+            userContrRegister = new UserContrRegister();
+            userContrRegister.OnUserRegister += UserContrRegister_OnUserRegister;
+            userContrMain.SetBounds(0, 0, 867, 558);
+            userContrRegister.SetBounds(0, 0, 867, 558);
+            this.Controls.Add(userContrMain);
+            this.Controls.Add(userContrRegister);
+            userContrRegister.BringToFront();
         }
 
-        private List<Customer> GetCustomers()
+        private void UserContrRegister_OnUserRegister()
         {
-            return new List<Customer>()
-            {
-                    
-            };
+            userContrMain.BringToFront();
         }
+
+
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
