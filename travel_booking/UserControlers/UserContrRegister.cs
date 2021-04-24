@@ -34,7 +34,6 @@ namespace travel_booking
                 sqlCommand.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show($"You have been registered!. You can now log in");
-               
 
             }
 
