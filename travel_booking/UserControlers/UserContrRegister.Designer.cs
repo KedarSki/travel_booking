@@ -1,6 +1,6 @@
 ﻿namespace travel_booking
 {
-    partial class Register
+    partial class UserContrRegister
     {
         /// <summary> 
         /// Required designer variable.

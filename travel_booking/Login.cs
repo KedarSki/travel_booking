@@ -16,8 +16,6 @@ namespace travel_booking
         {
             InitializeComponent();
         
-            
-           
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -44,7 +42,7 @@ namespace travel_booking
         private void RegisterButton_Click(object sender, EventArgs e)
         {
         
-            Register register = new Register();
+            UserContrRegister register = new UserContrRegister();
             register.Show();
             this.Hide();
         }

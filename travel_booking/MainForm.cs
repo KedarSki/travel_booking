@@ -8,43 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using travel_booking.Models;
+using travel_booking.UserControlers;
 
 namespace travel_booking
 {
     public partial class MainForm : Form
     {
         private Login login1;
-        private Register register1;
+        private UserContrRegister register1;
         private PictureBox pictureBox1;
 
+        UserContrMain userContrMain;
         public MainForm()
         {
-
-            GetEmployees();
-            GetCustomers();
             InitializeComponent();
-           
+          
         }
-
-        
 
 
         private List<Employee> GetEmployees()
         {
-            return new List<Employee>()
-            {
-                new Employee(1, "Kamil", "Nowak", "kamil.nowak@travelbooking.com"),
-                new Employee(2, "Patryk", "Henrykowski", "patryk.henrykowski@travelbooking.com"),
-                new Employee(3, "Halina", "Frąckowiak", "halina.frackowiak@travelbooking.com")
-
-            };
+            return null;
         }
 
         private List<Customer> GetCustomers()
         {
             return new List<Customer>()
             {
-                
+                    
             };
         }
         private void InitializeComponent()
@@ -52,7 +43,7 @@ namespace travel_booking
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.login1 = new travel_booking.Login();
-            this.register1 = new travel_booking.Register();
+            this.register1 = new travel_booking.UserContrRegister();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 

@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace travel_booking
 {
-    public partial class Register : UserControl
+    public partial class UserContrRegister : UserControl
     {
         string connectionString = @"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True";
-        public Register()
+        public UserContrRegister()
         {
             InitializeComponent();
         }
