@@ -94,6 +94,7 @@
       <DependentUpon>UserContrRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="bin\Debug\travel_booking.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,8 +105,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\travel_booking.exe" />
+    <Content Include="bin\Debug\travel_booking.pdb" />
     <Content Include="Resources\Icon1.ico" />
     <Content Include="travelIcon.ico" />
     <None Include="Resources\loginPicture.png" />

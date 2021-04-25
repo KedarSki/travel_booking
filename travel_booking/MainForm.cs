@@ -33,8 +33,8 @@ namespace travel_booking
         void GeneratePanels()
         {
             userContrMain = new UserContrMain();
-            userContrLogin = new UserContrLogin();
-            userContrRegister = new UserContrRegister();
+            //userContrLogin = new UserContrLogin();
+            //userContrRegister = new UserContrRegister();
             userContrRegister.setUserContrLogin(userContrLogin);
             userContrLogin.setUserContrRegister(userContrRegister);
             userContrRegister.OnUserRegister += UserContrRegister_OnUserRegister;
@@ -77,7 +77,7 @@ namespace travel_booking
             // userContrRegister
             // 
             this.userContrRegister.BackColor = System.Drawing.Color.Black;
-            this.userContrRegister.Location = new System.Drawing.Point(-2, 0);
+            this.userContrRegister.Location = new System.Drawing.Point(0, 3);
             this.userContrRegister.Name = "userContrRegister";
             this.userContrRegister.Size = new System.Drawing.Size(886, 760);
             this.userContrRegister.TabIndex = 2;
@@ -87,7 +87,7 @@ namespace travel_booking
             // 
             this.userContrLogin.BackColor = System.Drawing.Color.Black;
             this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userContrLogin.Location = new System.Drawing.Point(-2, 0);
+            this.userContrLogin.Location = new System.Drawing.Point(0, 3);
             this.userContrLogin.Name = "userContrLogin";
             this.userContrLogin.Size = new System.Drawing.Size(886, 760);
             this.userContrLogin.TabIndex = 1;

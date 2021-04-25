@@ -57,7 +57,7 @@ namespace travel_booking
             this.label1.Location = new System.Drawing.Point(97, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 37);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 9;
             this.label1.Text = "LOG IN";
             // 
             // panel1
@@ -66,7 +66,7 @@ namespace travel_booking
             this.panel1.Location = new System.Drawing.Point(33, 219);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 9;
             // 
             // panel2
             // 
@@ -74,7 +74,7 @@ namespace travel_booking
             this.panel2.Location = new System.Drawing.Point(33, 301);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 1);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 9;
             // 
             // LoginButton
             // 
@@ -87,7 +87,7 @@ namespace travel_booking
             this.LoginButton.Location = new System.Drawing.Point(33, 326);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(236, 37);
-            this.LoginButton.TabIndex = 6;
+            this.LoginButton.TabIndex = 4;
             this.LoginButton.Text = "LOG IN";
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
@@ -100,7 +100,7 @@ namespace travel_booking
             this.or.Location = new System.Drawing.Point(140, 375);
             this.or.Name = "or";
             this.or.Size = new System.Drawing.Size(30, 16);
-            this.or.TabIndex = 8;
+            this.or.TabIndex = 9;
             this.or.Text = "OR";
             // 
             // txtEmail
@@ -112,7 +112,7 @@ namespace travel_booking
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(205, 25);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.Text = "Email";
             this.txtEmail.TextChanged += new System.EventHandler(this.TxtEmail_TextChanged);
             // 
@@ -124,9 +124,11 @@ namespace travel_booking
             this.txtPassword.Location = new System.Drawing.Point(64, 270);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(205, 25);
-            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // RegisterButton
             // 
@@ -139,7 +141,7 @@ namespace travel_booking
             this.RegisterButton.Location = new System.Drawing.Point(33, 401);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(236, 37);
-            this.RegisterButton.TabIndex = 12;
+            this.RegisterButton.TabIndex = 5;
             this.RegisterButton.Text = "REGISTER";
             this.RegisterButton.UseVisualStyleBackColor = false;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
@@ -152,7 +154,7 @@ namespace travel_booking
             this.ClearAll.Location = new System.Drawing.Point(193, 307);
             this.ClearAll.Name = "ClearAll";
             this.ClearAll.Size = new System.Drawing.Size(67, 16);
-            this.ClearAll.TabIndex = 13;
+            this.ClearAll.TabIndex = 3;
             this.ClearAll.Text = "Clear All";
             this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
             // 
@@ -164,7 +166,7 @@ namespace travel_booking
             this.Exit.Location = new System.Drawing.Point(140, 452);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(33, 16);
-            this.Exit.TabIndex = 14;
+            this.Exit.TabIndex = 6;
             this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 

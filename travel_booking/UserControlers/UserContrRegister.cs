@@ -84,5 +84,5 @@ private void RegisterButton_Click(object sender, EventArgs e)
     {
         Application.Exit();
     }
-    }
-    }
+  }
+ }

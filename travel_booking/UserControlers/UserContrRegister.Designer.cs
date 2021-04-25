@@ -74,7 +74,7 @@
             this.ClearAll.Location = new System.Drawing.Point(507, 499);
             this.ClearAll.Name = "ClearAll";
             this.ClearAll.Size = new System.Drawing.Size(67, 16);
-            this.ClearAll.TabIndex = 39;
+            this.ClearAll.TabIndex = 8;
             this.ClearAll.Text = "Clear All";
             this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
             // 
@@ -89,7 +89,7 @@
             this.RegisterButton.Location = new System.Drawing.Point(338, 522);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(236, 37);
-            this.RegisterButton.TabIndex = 38;
+            this.RegisterButton.TabIndex = 9;
             this.RegisterButton.Text = "REGISTER";
             this.RegisterButton.UseVisualStyleBackColor = false;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
@@ -102,8 +102,9 @@
             this.txtPassword.Location = new System.Drawing.Point(369, 409);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(205, 25);
-            this.txtPassword.TabIndex = 37;
+            this.txtPassword.TabIndex = 6;
             this.txtPassword.Text = "Password";
             // 
             // txtEmail
@@ -115,7 +116,7 @@
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(205, 25);
-            this.txtEmail.TabIndex = 36;
+            this.txtEmail.TabIndex = 5;
             this.txtEmail.Text = "Email";
             // 
             // or
@@ -140,7 +141,7 @@
             this.LoginButton.Location = new System.Drawing.Point(338, 581);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(236, 37);
-            this.LoginButton.TabIndex = 34;
+            this.LoginButton.TabIndex = 10;
             this.LoginButton.Text = "LOG IN";
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
@@ -169,7 +170,7 @@
             this.Registerlabel.Location = new System.Drawing.Point(373, 99);
             this.Registerlabel.Name = "Registerlabel";
             this.Registerlabel.Size = new System.Drawing.Size(185, 37);
-            this.Registerlabel.TabIndex = 29;
+            this.Registerlabel.TabIndex = 0;
             this.Registerlabel.Text = "REGISTER";
             // 
             // pictureBox3
@@ -210,8 +211,9 @@
             this.textConfirmPassword.Location = new System.Drawing.Point(369, 465);
             this.textConfirmPassword.Multiline = true;
             this.textConfirmPassword.Name = "textConfirmPassword";
+            this.textConfirmPassword.PasswordChar = '*';
             this.textConfirmPassword.Size = new System.Drawing.Size(205, 25);
-            this.textConfirmPassword.TabIndex = 43;
+            this.textConfirmPassword.TabIndex = 7;
             this.textConfirmPassword.Text = "Confirm Password";
             // 
             // panel3
@@ -240,7 +242,7 @@
             this.Exit.Location = new System.Drawing.Point(441, 621);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(33, 16);
-            this.Exit.TabIndex = 44;
+            this.Exit.TabIndex = 11;
             this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -253,7 +255,7 @@
             this.txtFirstName.Multiline = true;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(205, 25);
-            this.txtFirstName.TabIndex = 47;
+            this.txtFirstName.TabIndex = 1;
             this.txtFirstName.Text = "First Name";
             // 
             // panel4
@@ -262,7 +264,7 @@
             this.panel4.Location = new System.Drawing.Point(338, 195);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 1);
-            this.panel4.TabIndex = 46;
+            this.panel4.TabIndex = 11;
             // 
             // pictureBox5
             // 
@@ -283,7 +285,7 @@
             this.txtLastName.Multiline = true;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(205, 25);
-            this.txtLastName.TabIndex = 50;
+            this.txtLastName.TabIndex = 2;
             this.txtLastName.Text = "Last Name";
             // 
             // panel5
@@ -313,7 +315,7 @@
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(205, 25);
-            this.txtPhone.TabIndex = 56;
+            this.txtPhone.TabIndex = 4;
             this.txtPhone.Text = "Phone Number";
             // 
             // panel6
@@ -343,7 +345,7 @@
             this.txtDateOfBirth.Multiline = true;
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(205, 25);
-            this.txtDateOfBirth.TabIndex = 53;
+            this.txtDateOfBirth.TabIndex = 3;
             this.txtDateOfBirth.Text = "Date Of Birth";
             // 
             // panel7
