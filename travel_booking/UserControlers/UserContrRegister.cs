@@ -13,11 +13,12 @@ namespace travel_booking
 {
     public partial class UserContrRegister : UserControl
 
-        
     {
+
         public delegate void RegisterAction();
         public event RegisterAction OnUserRegister;
-        string connectionString = @"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True";
+        readonly string connectionString = @"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True";       
+
         public UserContrRegister()
         {
             InitializeComponent();
@@ -36,8 +37,7 @@ namespace travel_booking
                 sqlCommand.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
                 sqlCommand.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                 sqlCommand.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
-                sqlCommand.ExecuteNonQuery();
-
+                
                 bool registerSuccess = true;
 
                 if (registerSuccess)
@@ -45,8 +45,9 @@ namespace travel_booking
                 else
                     MessageBox.Show("Provided details do not match to requirements. Please check the detail and try again.");
 
-            }
+                sqlCommand.ExecuteNonQuery();
 
+            }
             
         }
 
@@ -58,7 +59,8 @@ namespace travel_booking
             txtPhone.Text = "";
             txtEmail.Text = "";
             txtPassword.Text = "";
-            
+
         }
+     
     }
 }

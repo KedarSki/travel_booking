@@ -2,7 +2,7 @@
 
 namespace travel_booking
 {
-    partial class Login
+    partial class UserContrLogin
     {
         /// <summary> 
         /// Required designer variable.
@@ -114,6 +114,7 @@ namespace travel_booking
             this.txtEmail.Size = new System.Drawing.Size(205, 25);
             this.txtEmail.TabIndex = 10;
             this.txtEmail.Text = "Email";
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtPassword
             // 
@@ -197,7 +198,7 @@ namespace travel_booking
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Login
+            // UserContrLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,8 +216,9 @@ namespace travel_booking
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Login";
-            this.Size = new System.Drawing.Size(308, 486);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Name = "UserContrLogin";
+            this.Size = new System.Drawing.Size(752, 655);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

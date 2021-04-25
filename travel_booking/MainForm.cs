@@ -18,6 +18,11 @@ namespace travel_booking
 
         UserContrMain userContrMain;
         UserContrRegister userContrRegister;
+        UserContrLogin userContrLogin;
+        private PictureBox pictureBox1;
+        
+       
+
         public MainForm()
         {
             InitializeComponent();
@@ -29,11 +34,15 @@ namespace travel_booking
         {
             userContrMain = new UserContrMain();
             userContrRegister = new UserContrRegister();
+            userContrLogin = new UserContrLogin();
             userContrRegister.OnUserRegister += UserContrRegister_OnUserRegister;
-            userContrMain.SetBounds(0, 0, 867, 558);
-            userContrRegister.SetBounds(0, 0, 867, 558);
+            userContrLogin.OnUserLogin += UserContrRegister_Load;
+            userContrMain.SetBounds(0, 0, 886, 760);
+            userContrRegister.SetBounds(0, 0, 886, 760);
+            userContrLogin.SetBounds(0, 0, 886, 760);
             this.Controls.Add(userContrMain);
             this.Controls.Add(userContrRegister);
+            this.Controls.Add(userContrLogin);
             userContrRegister.BringToFront();
         }
 
@@ -47,8 +56,8 @@ namespace travel_booking
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.login1 = new travel_booking.Login();
-            this.register1 = new travel_booking.UserContrRegister();
+            this.userContrRegister = new travel_booking.UserContrRegister();
+            this.userContrLogin = new travel_booking.UserContrLogin();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,28 +72,30 @@ namespace travel_booking
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // login1
+            // userContrRegister
             // 
-            this.login1.BackColor = System.Drawing.Color.Black;
-            this.login1.Location = new System.Drawing.Point(155, 515);
-            this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(329, 486);
-            this.login1.TabIndex = 1;
+            this.userContrRegister.BackColor = System.Drawing.Color.Black;
+            this.userContrRegister.Location = new System.Drawing.Point(227, -19);
+            this.userContrRegister.Name = "userContrRegister";
+            this.userContrRegister.Size = new System.Drawing.Size(886, 760);
+            this.userContrRegister.TabIndex = 2;
+            this.userContrRegister.Load += new System.EventHandler(this.UserContrRegister_Load);
             // 
-            // register1
+            // userContrLogin
             // 
-            this.register1.BackColor = System.Drawing.Color.Black;
-            this.register1.Location = new System.Drawing.Point(2, 12);
-            this.register1.Name = "register1";
-            this.register1.Size = new System.Drawing.Size(980, 654);
-            this.register1.TabIndex = 2;
+            this.userContrLogin.BackColor = System.Drawing.Color.Black;
+            this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.userContrLogin.Location = new System.Drawing.Point(23, 12);
+            this.userContrLogin.Name = "userContrLogin";
+            this.userContrLogin.Size = new System.Drawing.Size(329, 486);
+            this.userContrLogin.TabIndex = 1;
             // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(980, 670);
-            this.Controls.Add(this.register1);
-            this.Controls.Add(this.login1);
+            this.ClientSize = new System.Drawing.Size(1337, 864);
+            this.Controls.Add(this.userContrRegister);
+            this.Controls.Add(this.userContrLogin);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -93,6 +104,12 @@ namespace travel_booking
             this.ResumeLayout(false);
 
         }
+
+        private void UserContrRegister_Load(object sender, EventArgs e)
+        {
+            userContrLogin.BringToFront();
+        }
+
 
     }
 }

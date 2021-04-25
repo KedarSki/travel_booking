@@ -12,9 +12,12 @@ namespace travel_booking.UserControlers
 {
     public partial class UserContrMain : UserControl
     {
+
+
         public UserContrMain()
         {
             InitializeComponent();
+            
         }
     }
 }

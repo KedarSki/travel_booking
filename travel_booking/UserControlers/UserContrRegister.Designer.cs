@@ -362,7 +362,7 @@
             this.pictureBox8.TabIndex = 51;
             this.pictureBox8.TabStop = false;
             // 
-            // Register
+            // UserContrRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -395,8 +395,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Registerlabel);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Register";
-            this.Size = new System.Drawing.Size(980, 654);
+            this.Name = "UserContrRegister";
+            this.Size = new System.Drawing.Size(932, 655);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

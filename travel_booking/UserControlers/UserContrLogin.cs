@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace travel_booking
 {
-    public partial class Login : UserControl
+    public partial class UserContrLogin : UserControl
     {
-        public Login()
+        UserContrRegister userContrRegister;
+        internal Action<object, EventArgs> OnUserLogin;
+
+        public UserContrLogin()
         {
             InitializeComponent();
         
@@ -36,15 +39,20 @@ namespace travel_booking
 
         private void ClearAll_Click(object sender, EventArgs e)
         {
-     
+            
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-        
-            UserContrRegister register = new UserContrRegister();
-            register.Show();
+
+            userContrRegister = new UserContrRegister();
+            userContrRegister.Show();
             this.Hide();
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }
