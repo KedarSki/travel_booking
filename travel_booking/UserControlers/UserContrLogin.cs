@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using travel_booking.UserControlers;
 
 namespace travel_booking
 {
     public partial class UserContrLogin : UserControl
     {
-        UserContrRegister userContrRegister;
+        
+        
+
         internal Action<object, EventArgs> OnUserLogin;
 
         public UserContrLogin()
@@ -28,7 +31,7 @@ namespace travel_booking
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
 
 
@@ -45,12 +48,16 @@ namespace travel_booking
         private void RegisterButton_Click(object sender, EventArgs e)
         {
 
-            userContrRegister = new UserContrRegister();
-            userContrRegister.Show();
+            UserContrRegister userContrRegister = new UserContrRegister();
+            UserContrMain userContrMain = new UserContrMain();
             this.Hide();
+            userContrMain.Show();
+            userContrRegister.BringToFront();
+
+
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
+        private void TxtEmail_TextChanged(object sender, EventArgs e)
         {
 
         }

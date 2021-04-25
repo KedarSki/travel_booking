@@ -114,7 +114,7 @@ namespace travel_booking
             this.txtEmail.Size = new System.Drawing.Size(205, 25);
             this.txtEmail.TabIndex = 10;
             this.txtEmail.Text = "Email";
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.TextChanged += new System.EventHandler(this.TxtEmail_TextChanged);
             // 
             // txtPassword
             // 

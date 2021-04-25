@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using travel_booking.UserControlers;
 
 namespace travel_booking
 {
     public partial class UserContrRegister : UserControl
 
     {
-
+       
         public delegate void RegisterAction();
         public event RegisterAction OnUserRegister;
         readonly string connectionString = @"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True";       
@@ -61,6 +62,21 @@ namespace travel_booking
             txtPassword.Text = "";
 
         }
-     
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            UserContrLogin userContrLogin = new UserContrLogin();
+            UserContrMain userContrMain = new UserContrMain();
+            this.Hide();
+            userContrMain.Show();
+            userContrLogin.Show();
+            userContrLogin.BringToFront();
+            
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

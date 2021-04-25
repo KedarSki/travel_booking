@@ -143,6 +143,7 @@
             this.LoginButton.TabIndex = 34;
             this.LoginButton.Text = "LOG IN";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // panel2
             // 
@@ -241,6 +242,7 @@
             this.Exit.Size = new System.Drawing.Size(33, 16);
             this.Exit.TabIndex = 44;
             this.Exit.Text = "Exit";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // txtFirstName
             // 

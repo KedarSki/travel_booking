@@ -75,7 +75,7 @@ namespace travel_booking
             // userContrRegister
             // 
             this.userContrRegister.BackColor = System.Drawing.Color.Black;
-            this.userContrRegister.Location = new System.Drawing.Point(227, -19);
+            this.userContrRegister.Location = new System.Drawing.Point(-2, 0);
             this.userContrRegister.Name = "userContrRegister";
             this.userContrRegister.Size = new System.Drawing.Size(886, 760);
             this.userContrRegister.TabIndex = 2;
@@ -85,15 +85,15 @@ namespace travel_booking
             // 
             this.userContrLogin.BackColor = System.Drawing.Color.Black;
             this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userContrLogin.Location = new System.Drawing.Point(23, 12);
+            this.userContrLogin.Location = new System.Drawing.Point(-2, 0);
             this.userContrLogin.Name = "userContrLogin";
-            this.userContrLogin.Size = new System.Drawing.Size(329, 486);
+            this.userContrLogin.Size = new System.Drawing.Size(886, 760);
             this.userContrLogin.TabIndex = 1;
             // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1337, 864);
+            this.ClientSize = new System.Drawing.Size(886, 760);
             this.Controls.Add(this.userContrRegister);
             this.Controls.Add(this.userContrLogin);
             this.Controls.Add(this.pictureBox1);
@@ -107,7 +107,7 @@ namespace travel_booking
 
         private void UserContrRegister_Load(object sender, EventArgs e)
         {
-            userContrLogin.BringToFront();
+             
         }
 
 
