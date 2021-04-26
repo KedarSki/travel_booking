@@ -20,8 +20,7 @@ namespace travel_booking
         UserContrRegister userContrRegister;
         UserContrLogin userContrLogin;
         private PictureBox pictureBox1;
-
-
+        private UserContrLogin.LoginAction UserContrLogin_OnUserLogin;
 
         public MainForm()
         {
@@ -38,7 +37,7 @@ namespace travel_booking
             userContrRegister.setUserContrLogin(userContrLogin);
             userContrLogin.setUserContrRegister(userContrRegister);
             userContrRegister.OnUserRegister += UserContrRegister_OnUserRegister;
-            userContrLogin.OnUserLogin += UserContrRegister_Load;
+            userContrLogin.OnUserLogin += UserContrLogin_OnUserLogin;
             userContrMain.SetBounds(0, 0, 886, 760);
             userContrRegister.SetBounds(0, 0, 886, 760);
             userContrLogin.SetBounds(0, 0, 886, 760);

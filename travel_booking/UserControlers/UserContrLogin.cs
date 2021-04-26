@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using travel_booking.UserControlers;
+using System.Data.SqlClient;
+
 
 namespace travel_booking
 {
     public partial class UserContrLogin : UserControl
     {
 
-        internal Action<object, EventArgs> OnUserLogin;
+     
+        public delegate void LoginAction();
+        public event LoginAction OnUserLogin;
         UserContrRegister userContrRegister;
-
+       
 
         public UserContrLogin()
         {
@@ -42,9 +46,21 @@ namespace travel_booking
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            
-            this.Hide();
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+            string query = "Select * from tblUser Where Email = ' " + txtEmail.Text.Trim() + "' and Password = '" + txtPassword.Text.Trim() + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlConnection);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+
+            bool loginSuccess = true;
+
+            if (loginSuccess)
+                this.Hide();
+            else
+                MessageBox.Show("Email or/and Password is/are invalid. Please try again");
         }
+
+
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
