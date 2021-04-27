@@ -18,7 +18,7 @@ namespace travel_booking
 
         internal Action<object, EventArgs> OnUserLogin;
         UserContrRegister userContrRegister;
-
+        
 
         public UserContrLogin()
         {
@@ -59,11 +59,12 @@ namespace travel_booking
             if (reader.Read() == true)
             {
                 this.Hide();
+                
             }
+                
+            
             else
-            {
                 MessageBox.Show("Email or/and Password is/are invalid. Please try again");
-            }
 
         }
 
@@ -93,7 +94,8 @@ namespace travel_booking
 
         private void ClearAll_Click(object sender, EventArgs e)
         {
-
+            txtEmail.Text = "";
+            txtPassword.Text = "";
         }
     }
 

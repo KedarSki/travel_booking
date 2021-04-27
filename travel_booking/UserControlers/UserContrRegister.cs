@@ -18,7 +18,7 @@ using travel_booking.UserControlers;
 
     public delegate void RegisterAction();
     UserContrLogin userContrLogin;
-    public event RegisterAction OnUserRegister;
+        public event RegisterAction OnUserRegister;
     readonly string connectionString = @"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True";
 
     public UserContrRegister()  
@@ -47,16 +47,25 @@ private void RegisterButton_Click(object sender, EventArgs e)
 
         bool registerSuccess = true;
 
-        if (registerSuccess)
-            OnUserRegister?.Invoke();
-        else
-            MessageBox.Show("Provided details do not match to requirements. Please check the detail and try again.");
+                if (registerSuccess)
+                {
+                    OnUserRegister?.Invoke();
+                    this.Hide();
+                    //userContrMain.Show();
+                    userContrLogin.Show();
+                    userContrLogin.BringToFront();
+
+                }
+                    
+                else
+                    MessageBox.Show("Provided details do not match to requirements. Please check the detail and try again.");
 
         sqlCommand.ExecuteNonQuery();
 
-    }
 
-}
+            }
+
+        }
 
     private void ClearAll_Click(object sender, EventArgs e)
     {
