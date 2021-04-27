@@ -16,11 +16,9 @@ namespace travel_booking
     public partial class UserContrLogin : UserControl
     {
 
-     
-        public delegate void LoginAction();
-        public event LoginAction OnUserLogin;
+        internal Action<object, EventArgs> OnUserLogin;
         UserContrRegister userContrRegister;
-       
+
 
         public UserContrLogin()
         {
@@ -47,17 +45,26 @@ namespace travel_booking
         private void LoginButton_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
-            string query = "Select * from tblUser Where Email = ' " + txtEmail.Text.Trim() + "' and Password = '" + txtPassword.Text.Trim() + "'";
-            SqlDataAdapter sda = new SqlDataAdapter(query, sqlConnection);
-            DataTable dataTable = new DataTable();
-            sda.Fill(dataTable);
+            sqlConnection.Open();
+            string query = "Select * from tblUser Where Email = @Email and Password = @Password";
+            SqlCommand command = new SqlCommand();
+            command.Connection = sqlConnection;
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
 
-            bool loginSuccess = true;
+            command.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
+            command.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
 
-            if (loginSuccess)
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read() == true)
+            {
                 this.Hide();
+            }
             else
+            {
                 MessageBox.Show("Email or/and Password is/are invalid. Please try again");
+            }
+
         }
 
 

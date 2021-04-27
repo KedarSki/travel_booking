@@ -20,7 +20,6 @@ namespace travel_booking
         UserContrRegister userContrRegister;
         UserContrLogin userContrLogin;
         private PictureBox pictureBox1;
-        private UserContrLogin.LoginAction UserContrLogin_OnUserLogin;
 
         public MainForm()
         {
@@ -37,7 +36,7 @@ namespace travel_booking
             userContrRegister.setUserContrLogin(userContrLogin);
             userContrLogin.setUserContrRegister(userContrRegister);
             userContrRegister.OnUserRegister += UserContrRegister_OnUserRegister;
-            userContrLogin.OnUserLogin += UserContrLogin_OnUserLogin;
+            userContrLogin.OnUserLogin += UserContrRegister_Load;
             userContrMain.SetBounds(0, 0, 886, 760);
             userContrRegister.SetBounds(0, 0, 886, 760);
             userContrLogin.SetBounds(0, 0, 886, 760);
@@ -76,7 +75,7 @@ namespace travel_booking
             // userContrRegister
             // 
             this.userContrRegister.BackColor = System.Drawing.Color.Black;
-            this.userContrRegister.Location = new System.Drawing.Point(0, 3);
+            this.userContrRegister.Location = new System.Drawing.Point(-12, 729);
             this.userContrRegister.Name = "userContrRegister";
             this.userContrRegister.Size = new System.Drawing.Size(886, 760);
             this.userContrRegister.TabIndex = 2;
@@ -86,7 +85,7 @@ namespace travel_booking
             // 
             this.userContrLogin.BackColor = System.Drawing.Color.Black;
             this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userContrLogin.Location = new System.Drawing.Point(0, 3);
+            this.userContrLogin.Location = new System.Drawing.Point(64, 708);
             this.userContrLogin.Name = "userContrLogin";
             this.userContrLogin.Size = new System.Drawing.Size(886, 760);
             this.userContrLogin.TabIndex = 1;

@@ -21,7 +21,7 @@ using travel_booking.UserControlers;
     public event RegisterAction OnUserRegister;
     readonly string connectionString = @"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True";
 
-    public UserContrRegister()
+    public UserContrRegister()  
     {
         InitializeComponent();
     }
