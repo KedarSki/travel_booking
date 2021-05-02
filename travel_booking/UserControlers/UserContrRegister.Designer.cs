@@ -257,6 +257,7 @@
             this.txtFirstName.Size = new System.Drawing.Size(205, 25);
             this.txtFirstName.TabIndex = 1;
             this.txtFirstName.Text = "First Name";
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // panel4
             // 
@@ -401,6 +402,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "UserContrRegister";
             this.Size = new System.Drawing.Size(932, 655);
+            this.Load += new System.EventHandler(this.UserContrRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

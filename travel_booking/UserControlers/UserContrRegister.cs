@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using travel_booking.UserControlers;
+using System.Text.RegularExpressions;
 
-    namespace travel_booking
+namespace travel_booking
     {
     public partial class UserContrRegister : UserControl
 
@@ -35,33 +36,64 @@ private void RegisterButton_Click(object sender, EventArgs e)
 {
     using (SqlConnection sqlConnection = new SqlConnection(connectionString))
     {
+
         sqlConnection.Open();
-        SqlCommand sqlCommand = new SqlCommand("UserAdd", sqlConnection);
-        sqlCommand.CommandType = CommandType.StoredProcedure;
+                SqlCommand sqlCommand = new SqlCommand("UserAdd", sqlConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
         sqlCommand.Parameters.AddWithValue("@FirstName", txtFirstName.Text.Trim());
         sqlCommand.Parameters.AddWithValue("@LastName", txtLastName.Text.Trim());
         sqlCommand.Parameters.AddWithValue("@DateOfBirth", txtDateOfBirth.Text.Trim());
         sqlCommand.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
         sqlCommand.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
         sqlCommand.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+        
 
-        bool registerSuccess = true;
+                if (txtFirstName.Text == "")
+                {
+                    MessageBox.Show("Please enter First Name");
+                    txtFirstName.Focus();
+                }
+                else if (txtLastName.Text == "")
+                {
+                    MessageBox.Show("Please enter First Name");
+                    txtLastName.Focus();
+                }
+                else if (txtDateOfBirth.Text == "")
+                {
+                    MessageBox.Show("Please enter Date Of Birth");
+                    txtDateOfBirth.Focus();
+                }
 
-                if (registerSuccess)
+                else if (txtPhone.Text == "")
+                {
+                    MessageBox.Show("Please enter Phone number");
+                    txtPhone.Focus();
+                }
+
+                else if (txtEmail.Text == "" || txtEmail.Text != "@")
+                {
+                    MessageBox.Show("Please enter Email Address");
+                    txtEmail.Focus();
+                }
+
+                else if(txtPassword.Text == "")
+                {
+                    MessageBox.Show("Please enter Password");
+                        txtPassword.Focus();
+                }
+
+                else
                 {
                     OnUserRegister?.Invoke();
                     this.Hide();
                     //userContrMain.Show();
                     userContrLogin.Show();
                     userContrLogin.BringToFront();
-
                 }
-                    
-                else
-                    MessageBox.Show("Provided details do not match to requirements. Please check the detail and try again.");
 
         sqlCommand.ExecuteNonQuery();
-
 
             }
 
@@ -93,5 +125,17 @@ private void RegisterButton_Click(object sender, EventArgs e)
     {
         Application.Exit();
     }
-  }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void UserContrRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
  }

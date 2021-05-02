@@ -47,22 +47,19 @@ namespace travel_booking
             SqlConnection sqlConnection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
             sqlConnection.Open();
             string query = "Select * from tblUser Where Email = @Email and Password = @Password";
-            SqlCommand command = new SqlCommand();
-            command.Connection = sqlConnection;
-            command.CommandType = CommandType.Text;
-            command.CommandText = query;
+            SqlCommand command = new SqlCommand
+            {
+                Connection = sqlConnection,
+                CommandType = CommandType.Text,
+                CommandText = query
+            };
 
             command.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
             command.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
 
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read() == true)
-            {
-                this.Hide();
-                
-            }
-                
-            
+                this.Hide();            
             else
                 MessageBox.Show("Email or/and Password is/are invalid. Please try again");
 
