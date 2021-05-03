@@ -33,13 +33,16 @@ namespace travel_booking
         private Label label4;
         private Label Exit;
         private PictureBox pictureBox1;
+        private Button submitt;
         SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
         public MainForm()
         {
             InitializeComponent();
             GeneratePanels();
+            PopulateCombo();
 
-        }
+;        }
+
 
         void GeneratePanels()
         {
@@ -69,8 +72,6 @@ namespace travel_booking
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userContrRegister = new travel_booking.UserContrRegister();
-            this.userContrLogin = new travel_booking.UserContrLogin();
             this.destinationFrom = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -81,6 +82,9 @@ namespace travel_booking
             this.destinationTo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Label();
+            this.userContrRegister = new travel_booking.UserContrRegister();
+            this.userContrLogin = new travel_booking.UserContrLogin();
+            this.submitt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,24 +99,6 @@ namespace travel_booking
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // userContrRegister
-            // 
-            this.userContrRegister.BackColor = System.Drawing.Color.Black;
-            this.userContrRegister.Location = new System.Drawing.Point(-12, 729);
-            this.userContrRegister.Name = "userContrRegister";
-            this.userContrRegister.Size = new System.Drawing.Size(886, 760);
-            this.userContrRegister.TabIndex = 2;
-            this.userContrRegister.Load += new System.EventHandler(this.UserContrRegister_Load);
-            // 
-            // userContrLogin
-            // 
-            this.userContrLogin.BackColor = System.Drawing.Color.Black;
-            this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userContrLogin.Location = new System.Drawing.Point(64, 708);
-            this.userContrLogin.Name = "userContrLogin";
-            this.userContrLogin.Size = new System.Drawing.Size(886, 760);
-            this.userContrLogin.TabIndex = 1;
-            // 
             // destinationFrom
             // 
             this.destinationFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -121,7 +107,6 @@ namespace travel_booking
             this.destinationFrom.Name = "destinationFrom";
             this.destinationFrom.Size = new System.Drawing.Size(201, 28);
             this.destinationFrom.TabIndex = 3;
-            this.destinationFrom.SelectedIndexChanged += new System.EventHandler(this.destinationFrom_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -215,10 +200,41 @@ namespace travel_booking
             this.Exit.Text = "EXIT";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // userContrRegister
+            // 
+            this.userContrRegister.BackColor = System.Drawing.Color.Black;
+            this.userContrRegister.Location = new System.Drawing.Point(-12, 729);
+            this.userContrRegister.Name = "userContrRegister";
+            this.userContrRegister.Size = new System.Drawing.Size(886, 760);
+            this.userContrRegister.TabIndex = 2;
+            this.userContrRegister.Load += new System.EventHandler(this.UserContrRegister_Load);
+            // 
+            // userContrLogin
+            // 
+            this.userContrLogin.BackColor = System.Drawing.Color.Black;
+            this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.userContrLogin.Location = new System.Drawing.Point(64, 708);
+            this.userContrLogin.Name = "userContrLogin";
+            this.userContrLogin.Size = new System.Drawing.Size(886, 760);
+            this.userContrLogin.TabIndex = 1;
+            // 
+            // submitt
+            // 
+            this.submitt.BackColor = System.Drawing.Color.Green;
+            this.submitt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.submitt.ForeColor = System.Drawing.Color.Orange;
+            this.submitt.Location = new System.Drawing.Point(320, 607);
+            this.submitt.Name = "submitt";
+            this.submitt.Size = new System.Drawing.Size(139, 34);
+            this.submitt.TabIndex = 15;
+            this.submitt.Text = "Submitt";
+            this.submitt.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(886, 760);
+            this.Controls.Add(this.submitt);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.destinationTo);
@@ -254,24 +270,24 @@ namespace travel_booking
         private void MainForm_Load(object sender, EventArgs e)
         {
             
-            con = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
-            cmd = new SqlCommand();
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT City FROM tblDestinations";
-            dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                destinationFrom.Items.Add(dr["City"]);
-            }
-            con.Close();
 
         }   
-        private void destinationFrom_SelectedIndexChanged(object sender, EventArgs e)
+
+        void PopulateCombo()
         {
+            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[tblDestinations]", connection);
+            connection.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
 
-
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                destinationFrom.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
+                destinationTo.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
+            }
         }
+
     }
 }
