@@ -53,9 +53,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DestinationsData\DestinationService.cs" />
+    <Compile Include="DestinationsData\TravelService.cs" />
     <Compile Include="FileOperations\FileService.cs" />
-    <Compile Include="Models\Destination.cs" />
     <Compile Include="UserControlers\UserContrLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>

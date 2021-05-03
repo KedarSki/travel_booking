@@ -39,6 +39,12 @@ namespace travel_booking
         private Button sum;
         private NumericUpDown childrenNumeric;
         private NumericUpDown adultNumeric;
+        private DataGridView dataSum;
+        private DataGridViewTextBoxColumn FromColumn;
+        private DataGridViewTextBoxColumn ToColumn;
+        private DataGridViewTextBoxColumn DateFrom;
+        private DataGridViewTextBoxColumn DateTo;
+        private DataGridViewTextBoxColumn ChildrenColumn;
         SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
         public MainForm()
         {
@@ -68,7 +74,38 @@ namespace travel_booking
             userContrRegister.BringToFront();
         }
 
-        private void UserContrRegister_OnUserRegister()
+        void PopulateComboDestinations()
+        {
+            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[tblDestinations]", connection);
+            connection.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                destinationTo.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
+            }
+        }
+
+        void PopulateComboDepartures()
+        {
+            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Departures]", connection);
+            connection.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                destinationFrom.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
+            }
+        }
+
+
+            private void UserContrRegister_OnUserRegister()
         {
             userContrMain.BringToFront();
         }
@@ -94,14 +131,21 @@ namespace travel_booking
             this.TotalPrice = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.userContrRegister = new travel_booking.UserContrRegister();
-            this.userContrLogin = new travel_booking.UserContrLogin();
             this.sum = new System.Windows.Forms.Button();
             this.childrenNumeric = new System.Windows.Forms.NumericUpDown();
             this.adultNumeric = new System.Windows.Forms.NumericUpDown();
+            this.dataSum = new System.Windows.Forms.DataGridView();
+            this.userContrRegister = new travel_booking.UserContrRegister();
+            this.userContrLogin = new travel_booking.UserContrLogin();
+            this.FromColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ToColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChildrenColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSum)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -127,7 +171,7 @@ namespace travel_booking
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(295, 237);
+            this.dateTimePicker1.Location = new System.Drawing.Point(241, 237);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(174, 26);
             this.dateTimePicker1.TabIndex = 4;
@@ -135,7 +179,7 @@ namespace travel_booking
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(295, 315);
+            this.dateTimePicker2.Location = new System.Drawing.Point(241, 315);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(174, 26);
             this.dateTimePicker2.TabIndex = 5;
@@ -156,7 +200,7 @@ namespace travel_booking
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(328, 198);
+            this.label1.Location = new System.Drawing.Point(274, 198);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 29);
             this.label1.TabIndex = 8;
@@ -167,7 +211,7 @@ namespace travel_booking
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(319, 280);
+            this.label3.Location = new System.Drawing.Point(265, 280);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 29);
             this.label3.TabIndex = 10;
@@ -221,7 +265,7 @@ namespace travel_booking
             this.submitt.BackColor = System.Drawing.Color.Green;
             this.submitt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.submitt.ForeColor = System.Drawing.Color.Orange;
-            this.submitt.Location = new System.Drawing.Point(285, 568);
+            this.submitt.Location = new System.Drawing.Point(570, 606);
             this.submitt.Name = "submitt";
             this.submitt.Size = new System.Drawing.Size(174, 34);
             this.submitt.TabIndex = 15;
@@ -254,10 +298,10 @@ namespace travel_booking
             // 
             // TotalPrice
             // 
-            this.TotalPrice.Location = new System.Drawing.Point(12, 533);
+            this.TotalPrice.Location = new System.Drawing.Point(241, 444);
             this.TotalPrice.Multiline = true;
             this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.Size = new System.Drawing.Size(197, 28);
+            this.TotalPrice.Size = new System.Drawing.Size(174, 34);
             this.TotalPrice.TabIndex = 20;
             // 
             // label7
@@ -265,7 +309,7 @@ namespace travel_booking
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.Color.Orange;
-            this.label7.Location = new System.Drawing.Point(12, 501);
+            this.label7.Location = new System.Drawing.Point(265, 412);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 29);
             this.label7.TabIndex = 21;
@@ -282,30 +326,12 @@ namespace travel_booking
             this.label8.TabIndex = 22;
             this.label8.Text = "*Choose any travel for $100 for Adult and 50% discount for child";
             // 
-            // userContrRegister
-            // 
-            this.userContrRegister.BackColor = System.Drawing.Color.Black;
-            this.userContrRegister.Location = new System.Drawing.Point(-12, 729);
-            this.userContrRegister.Name = "userContrRegister";
-            this.userContrRegister.Size = new System.Drawing.Size(886, 760);
-            this.userContrRegister.TabIndex = 2;
-            this.userContrRegister.Load += new System.EventHandler(this.UserContrRegister_Load);
-            // 
-            // userContrLogin
-            // 
-            this.userContrLogin.BackColor = System.Drawing.Color.Black;
-            this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userContrLogin.Location = new System.Drawing.Point(64, 708);
-            this.userContrLogin.Name = "userContrLogin";
-            this.userContrLogin.Size = new System.Drawing.Size(886, 760);
-            this.userContrLogin.TabIndex = 1;
-            // 
             // sum
             // 
             this.sum.BackColor = System.Drawing.Color.Green;
             this.sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sum.ForeColor = System.Drawing.Color.Orange;
-            this.sum.Location = new System.Drawing.Point(295, 386);
+            this.sum.Location = new System.Drawing.Point(241, 534);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(174, 34);
             this.sum.TabIndex = 23;
@@ -340,10 +366,77 @@ namespace travel_booking
             this.adultNumeric.Size = new System.Drawing.Size(194, 26);
             this.adultNumeric.TabIndex = 25;
             // 
+            // dataSum
+            // 
+            this.dataSum.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataSum.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSum.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FromColumn,
+            this.ToColumn,
+            this.DateFrom,
+            this.DateTo,
+            this.ChildrenColumn});
+            this.dataSum.Location = new System.Drawing.Point(421, 205);
+            this.dataSum.Name = "dataSum";
+            this.dataSum.Size = new System.Drawing.Size(464, 395);
+            this.dataSum.TabIndex = 26;
+            this.dataSum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSum_CellContentClick);
+            // 
+            // userContrRegister
+            // 
+            this.userContrRegister.BackColor = System.Drawing.Color.Black;
+            this.userContrRegister.Location = new System.Drawing.Point(-12, 729);
+            this.userContrRegister.Name = "userContrRegister";
+            this.userContrRegister.Size = new System.Drawing.Size(886, 760);
+            this.userContrRegister.TabIndex = 2;
+            this.userContrRegister.Load += new System.EventHandler(this.UserContrRegister_Load);
+            // 
+            // userContrLogin
+            // 
+            this.userContrLogin.BackColor = System.Drawing.Color.Black;
+            this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.userContrLogin.Location = new System.Drawing.Point(64, 708);
+            this.userContrLogin.Name = "userContrLogin";
+            this.userContrLogin.Size = new System.Drawing.Size(886, 760);
+            this.userContrLogin.TabIndex = 1;
+            // 
+            // FromColumn
+            // 
+            this.FromColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FromColumn.HeaderText = "From";
+            this.FromColumn.Name = "FromColumn";
+            this.FromColumn.ReadOnly = true;
+            this.FromColumn.Width = 55;
+            // 
+            // ToColumn
+            // 
+            this.ToColumn.HeaderText = "To";
+            this.ToColumn.Name = "ToColumn";
+            this.ToColumn.ReadOnly = true;
+            // 
+            // DateFrom
+            // 
+            this.DateFrom.HeaderText = "DateFrom";
+            this.DateFrom.Name = "DateFrom";
+            this.DateFrom.ReadOnly = true;
+            // 
+            // DateTo
+            // 
+            this.DateTo.HeaderText = "DateTo";
+            this.DateTo.Name = "DateTo";
+            this.DateTo.ReadOnly = true;
+            // 
+            // ChildrenColumn
+            // 
+            this.ChildrenColumn.HeaderText = "ChildrenColumn";
+            this.ChildrenColumn.Name = "ChildrenColumn";
+            this.ChildrenColumn.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(886, 760);
+            this.Controls.Add(this.dataSum);
             this.Controls.Add(this.adultNumeric);
             this.Controls.Add(this.childrenNumeric);
             this.Controls.Add(this.sum);
@@ -372,6 +465,7 @@ namespace travel_booking
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,42 +483,11 @@ namespace travel_booking
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+          
 
         }   
 
-        void PopulateComboDestinations()
-        {
-            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
-            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[tblDestinations]", connection);
-            connection.Open();
-            SqlDataAdapter sda = new SqlDataAdapter(command);
-            DataSet ds = new DataSet();
-            sda.Fill(ds);
-
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-            {
-                destinationTo.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
-            }
-        }
-
-        void PopulateComboDepartures()
-        {
-            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
-            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Departures]", connection);
-            connection.Open();
-            SqlDataAdapter sda = new SqlDataAdapter(command);
-            DataSet ds = new DataSet();
-            sda.Fill(ds);
-
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-            {
-                destinationFrom.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
-            }
-
-          
-            
-        }
+        
 
 
         private void submitt_Click(object sender, EventArgs e)
@@ -446,6 +509,15 @@ namespace travel_booking
             totalChild = children * priceChild;
             TotalPrice.Text = (totalAdult + totalChild).ToString("$" + "0.00");
 
+            var travel = this.destinationFrom;
+            dataSum.DataSource = travel;
+            dataSum.Columns["From"].Visible = true;
+
+
+        }
+
+        private void dataSum_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
