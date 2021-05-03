@@ -19,9 +19,6 @@ namespace travel_booking
         UserContrMain userContrMain;
         UserContrRegister userContrRegister;
         UserContrLogin userContrLogin;
-        SqlConnection con;
-        SqlCommand cmd;
-        SqlDataReader dr;
         private ComboBox destinationFrom;
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
@@ -34,12 +31,21 @@ namespace travel_booking
         private Label Exit;
         private PictureBox pictureBox1;
         private Button submitt;
+        private Label label5;
+        private Label label6;
+        private TextBox TotalPrice;
+        private Label label7;
+        private Label label8;
+        private Button sum;
+        private NumericUpDown childrenNumeric;
+        private NumericUpDown adultNumeric;
         SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
         public MainForm()
         {
             InitializeComponent();
             GeneratePanels();
-            PopulateCombo();
+            PopulateComboDestinations();
+            PopulateComboDepartures();
 
 ;        }
 
@@ -82,10 +88,20 @@ namespace travel_booking
             this.destinationTo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Label();
+            this.submitt = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TotalPrice = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.userContrRegister = new travel_booking.UserContrRegister();
             this.userContrLogin = new travel_booking.UserContrLogin();
-            this.submitt = new System.Windows.Forms.Button();
+            this.sum = new System.Windows.Forms.Button();
+            this.childrenNumeric = new System.Windows.Forms.NumericUpDown();
+            this.adultNumeric = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -111,7 +127,7 @@ namespace travel_booking
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(217, 237);
+            this.dateTimePicker1.Location = new System.Drawing.Point(295, 237);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(174, 26);
             this.dateTimePicker1.TabIndex = 4;
@@ -119,9 +135,9 @@ namespace travel_booking
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(657, 235);
+            this.dateTimePicker2.Location = new System.Drawing.Point(295, 315);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(170, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(174, 26);
             this.dateTimePicker2.TabIndex = 5;
             // 
             // label
@@ -140,22 +156,22 @@ namespace travel_booking
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(220, 200);
+            this.label1.Location = new System.Drawing.Point(328, 198);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 29);
+            this.label1.Size = new System.Drawing.Size(141, 29);
             this.label1.TabIndex = 8;
-            this.label1.Text = "DATE FROM";
+            this.label1.Text = "Depart Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(685, 196);
+            this.label3.Location = new System.Drawing.Point(319, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 29);
+            this.label3.Size = new System.Drawing.Size(140, 29);
             this.label3.TabIndex = 10;
-            this.label3.Text = "DATE TO";
+            this.label3.Text = "Return Date";
             // 
             // label2
             // 
@@ -164,17 +180,17 @@ namespace travel_booking
             this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(29, 198);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 29);
+            this.label2.Size = new System.Drawing.Size(70, 29);
             this.label2.TabIndex = 11;
-            this.label2.Text = "TRAVEL FROM";
+            this.label2.Text = "From";
             // 
             // destinationTo
             // 
             this.destinationTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.destinationTo.FormattingEnabled = true;
-            this.destinationTo.Location = new System.Drawing.Point(397, 235);
+            this.destinationTo.Location = new System.Drawing.Point(12, 317);
             this.destinationTo.Name = "destinationTo";
-            this.destinationTo.Size = new System.Drawing.Size(241, 28);
+            this.destinationTo.Size = new System.Drawing.Size(199, 28);
             this.destinationTo.TabIndex = 12;
             // 
             // label4
@@ -182,11 +198,11 @@ namespace travel_booking
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(421, 198);
+            this.label4.Location = new System.Drawing.Point(29, 280);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 29);
+            this.label4.Size = new System.Drawing.Size(43, 29);
             this.label4.TabIndex = 13;
-            this.label4.Text = "TRAVEL TO";
+            this.label4.Text = "To";
             // 
             // Exit
             // 
@@ -199,6 +215,72 @@ namespace travel_booking
             this.Exit.TabIndex = 14;
             this.Exit.Text = "EXIT";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // submitt
+            // 
+            this.submitt.BackColor = System.Drawing.Color.Green;
+            this.submitt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.submitt.ForeColor = System.Drawing.Color.Orange;
+            this.submitt.Location = new System.Drawing.Point(285, 568);
+            this.submitt.Name = "submitt";
+            this.submitt.Size = new System.Drawing.Size(174, 34);
+            this.submitt.TabIndex = 15;
+            this.submitt.Text = "Submitt";
+            this.submitt.UseVisualStyleBackColor = false;
+            this.submitt.Click += new System.EventHandler(this.submitt_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.Color.Orange;
+            this.label5.Location = new System.Drawing.Point(29, 354);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 29);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Children";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.Color.Orange;
+            this.label6.Location = new System.Drawing.Point(29, 429);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 29);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Adults";
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.Location = new System.Drawing.Point(12, 533);
+            this.TotalPrice.Multiline = true;
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.Size = new System.Drawing.Size(197, 28);
+            this.TotalPrice.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.Color.Orange;
+            this.label7.Location = new System.Drawing.Point(12, 501);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(136, 29);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Total Price:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label8.Location = new System.Drawing.Point(14, 634);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(426, 18);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "*Choose any travel for $100 for Adult and 50% discount for child";
             // 
             // userContrRegister
             // 
@@ -218,22 +300,58 @@ namespace travel_booking
             this.userContrLogin.Size = new System.Drawing.Size(886, 760);
             this.userContrLogin.TabIndex = 1;
             // 
-            // submitt
+            // sum
             // 
-            this.submitt.BackColor = System.Drawing.Color.Green;
-            this.submitt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.submitt.ForeColor = System.Drawing.Color.Orange;
-            this.submitt.Location = new System.Drawing.Point(320, 607);
-            this.submitt.Name = "submitt";
-            this.submitt.Size = new System.Drawing.Size(139, 34);
-            this.submitt.TabIndex = 15;
-            this.submitt.Text = "Submitt";
-            this.submitt.UseVisualStyleBackColor = false;
+            this.sum.BackColor = System.Drawing.Color.Green;
+            this.sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sum.ForeColor = System.Drawing.Color.Orange;
+            this.sum.Location = new System.Drawing.Point(295, 386);
+            this.sum.Name = "sum";
+            this.sum.Size = new System.Drawing.Size(174, 34);
+            this.sum.TabIndex = 23;
+            this.sum.Text = "Show Total";
+            this.sum.UseVisualStyleBackColor = false;
+            this.sum.Click += new System.EventHandler(this.sum_Click);
+            // 
+            // childrenNumeric
+            // 
+            this.childrenNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.childrenNumeric.Location = new System.Drawing.Point(17, 396);
+            this.childrenNumeric.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.childrenNumeric.Name = "childrenNumeric";
+            this.childrenNumeric.Size = new System.Drawing.Size(194, 26);
+            this.childrenNumeric.TabIndex = 24;
+            this.childrenNumeric.ThousandsSeparator = true;
+            // 
+            // adultNumeric
+            // 
+            this.adultNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.adultNumeric.Location = new System.Drawing.Point(17, 461);
+            this.adultNumeric.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.adultNumeric.Name = "adultNumeric";
+            this.adultNumeric.Size = new System.Drawing.Size(194, 26);
+            this.adultNumeric.TabIndex = 25;
             // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(886, 760);
+            this.Controls.Add(this.adultNumeric);
+            this.Controls.Add(this.childrenNumeric);
+            this.Controls.Add(this.sum);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TotalPrice);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.submitt);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.label4);
@@ -252,6 +370,8 @@ namespace travel_booking
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,7 +393,7 @@ namespace travel_booking
 
         }   
 
-        void PopulateCombo()
+        void PopulateComboDestinations()
         {
             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
             SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[tblDestinations]", connection);
@@ -284,10 +404,49 @@ namespace travel_booking
 
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                destinationFrom.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
                 destinationTo.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
             }
         }
 
+        void PopulateComboDepartures()
+        {
+            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Departures]", connection);
+            connection.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                destinationFrom.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
+            }
+
+          
+            
+        }
+
+
+        private void submitt_Click(object sender, EventArgs e)
+        { 
+           
+        }
+
+        private void sum_Click(object sender, EventArgs e)
+        {
+
+            decimal totalAdult,totalChild, adults, children, priceAdult, priceChild;
+
+            adults = adultNumeric.Value;
+            children = childrenNumeric.Value;
+            priceAdult = 100;
+            priceChild = 50;
+
+            totalAdult = adults * priceAdult;
+            totalChild = children * priceChild;
+            TotalPrice.Text = (totalAdult + totalChild).ToString("$" + "0.00");
+
+
+        }
     }
 }
