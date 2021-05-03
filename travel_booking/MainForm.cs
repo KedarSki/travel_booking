@@ -19,6 +19,9 @@ namespace travel_booking
         UserContrMain userContrMain;
         UserContrRegister userContrRegister;
         UserContrLogin userContrLogin;
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataReader dr;
         private ComboBox destinationFrom;
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
@@ -250,14 +253,25 @@ namespace travel_booking
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            destinationFrom.Items.Clear();
+            
+            con = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT City FROM tblDestinations";
+            dr = cmd.ExecuteReader();
 
+            while (dr.Read())
+            {
+                destinationFrom.Items.Add(dr["City"]);
+            }
+            con.Close();
 
-        }
+        }   
         private void destinationFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-   
+
         }
     }
 }
