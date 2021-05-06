@@ -401,7 +401,7 @@
             this.Controls.Add(this.Registerlabel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UserContrRegister";
-            this.Size = new System.Drawing.Size(932, 655);
+            this.Size = new System.Drawing.Size(940, 720);
             this.Load += new System.EventHandler(this.UserContrRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -79,7 +79,7 @@ namespace travel_booking
         void PopulateComboDestinations()
         {
             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
-            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[tblDestinations]", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Destinations]", connection);
             connection.Open();
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataSet ds = new DataSet();
@@ -137,8 +137,6 @@ namespace travel_booking
             this.childrenNumeric = new System.Windows.Forms.NumericUpDown();
             this.adultNumeric = new System.Windows.Forms.NumericUpDown();
             this.dataSum = new System.Windows.Forms.DataGridView();
-            this.userContrRegister = new travel_booking.UserContrRegister();
-            this.userContrLogin = new travel_booking.UserContrLogin();
             this.FromColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ToColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DepartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,6 +144,8 @@ namespace travel_booking
             this.ChildrenColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adults = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userContrRegister = new travel_booking.UserContrRegister();
+            this.userContrLogin = new travel_booking.UserContrLogin();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).BeginInit();
@@ -389,24 +389,6 @@ namespace travel_booking
             this.dataSum.TabIndex = 26;
             this.dataSum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSum_CellContentClick);
             // 
-            // userContrRegister
-            // 
-            this.userContrRegister.BackColor = System.Drawing.Color.Black;
-            this.userContrRegister.Location = new System.Drawing.Point(-12, 729);
-            this.userContrRegister.Name = "userContrRegister";
-            this.userContrRegister.Size = new System.Drawing.Size(886, 760);
-            this.userContrRegister.TabIndex = 2;
-            this.userContrRegister.Load += new System.EventHandler(this.UserContrRegister_Load);
-            // 
-            // userContrLogin
-            // 
-            this.userContrLogin.BackColor = System.Drawing.Color.Black;
-            this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.userContrLogin.Location = new System.Drawing.Point(64, 708);
-            this.userContrLogin.Name = "userContrLogin";
-            this.userContrLogin.Size = new System.Drawing.Size(886, 760);
-            this.userContrLogin.TabIndex = 1;
-            // 
             // FromColumn
             // 
             this.FromColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -451,10 +433,28 @@ namespace travel_booking
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
+            // userContrRegister
+            // 
+            this.userContrRegister.BackColor = System.Drawing.Color.Black;
+            this.userContrRegister.Location = new System.Drawing.Point(-12, 729);
+            this.userContrRegister.Name = "userContrRegister";
+            this.userContrRegister.Size = new System.Drawing.Size(886, 760);
+            this.userContrRegister.TabIndex = 2;
+            this.userContrRegister.Load += new System.EventHandler(this.UserContrRegister_Load);
+            // 
+            // userContrLogin
+            // 
+            this.userContrLogin.BackColor = System.Drawing.Color.Black;
+            this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.userContrLogin.Location = new System.Drawing.Point(64, 708);
+            this.userContrLogin.Name = "userContrLogin";
+            this.userContrLogin.Size = new System.Drawing.Size(886, 760);
+            this.userContrLogin.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(932, 720);
+            this.ClientSize = new System.Drawing.Size(934, 720);
             this.Controls.Add(this.dataSum);
             this.Controls.Add(this.adultNumeric);
             this.Controls.Add(this.childrenNumeric);
