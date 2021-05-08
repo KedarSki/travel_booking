@@ -20,8 +20,8 @@ namespace travel_booking
         UserContrRegister userContrRegister;
         UserContrLogin userContrLogin;
         private ComboBox destinationFrom;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker departDate;
+        private DateTimePicker returnDate;
         private Label label;
         private Label label1;
         private Label label3;
@@ -39,14 +39,6 @@ namespace travel_booking
         private Button sum;
         private NumericUpDown childrenNumeric;
         private NumericUpDown adultNumeric;
-        private DataGridView dataSum;
-        private DataGridViewTextBoxColumn FromColumn;
-        private DataGridViewTextBoxColumn ToColumn;
-        private DataGridViewTextBoxColumn DepartDate;
-        private DataGridViewTextBoxColumn ReturnDate;
-        private DataGridViewTextBoxColumn ChildrenColumn;
-        private DataGridViewTextBoxColumn Adults;
-        private DataGridViewTextBoxColumn Total;
         SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
         public MainForm()
         {
@@ -100,10 +92,14 @@ namespace travel_booking
             DataSet ds = new DataSet();
             sda.Fill(ds);
 
+
+
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 destinationFrom.Items.Add(ds.Tables[0].Rows[i][1] + "," + ds.Tables[0].Rows[i][2]);
             }
+
+           
         }
 
 
@@ -118,8 +114,8 @@ namespace travel_booking
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.destinationFrom = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.departDate = new System.Windows.Forms.DateTimePicker();
+            this.returnDate = new System.Windows.Forms.DateTimePicker();
             this.label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -136,20 +132,11 @@ namespace travel_booking
             this.sum = new System.Windows.Forms.Button();
             this.childrenNumeric = new System.Windows.Forms.NumericUpDown();
             this.adultNumeric = new System.Windows.Forms.NumericUpDown();
-            this.dataSum = new System.Windows.Forms.DataGridView();
-            this.FromColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ToColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReturnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChildrenColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adults = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userContrRegister = new travel_booking.UserContrRegister();
             this.userContrLogin = new travel_booking.UserContrLogin();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSum)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -171,22 +158,23 @@ namespace travel_booking
             this.destinationFrom.Name = "destinationFrom";
             this.destinationFrom.Size = new System.Drawing.Size(169, 24);
             this.destinationFrom.TabIndex = 3;
+            this.destinationFrom.SelectedIndexChanged += new System.EventHandler(this.destinationFrom_SelectedIndexChanged);
             // 
-            // dateTimePicker1
+            // departDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(201, 228);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(169, 22);
-            this.dateTimePicker1.TabIndex = 4;
+            this.departDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.departDate.Location = new System.Drawing.Point(201, 228);
+            this.departDate.Name = "departDate";
+            this.departDate.Size = new System.Drawing.Size(169, 22);
+            this.departDate.TabIndex = 4;
             // 
-            // dateTimePicker2
+            // returnDate
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(612, 230);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(174, 22);
-            this.dateTimePicker2.TabIndex = 5;
+            this.returnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.returnDate.Location = new System.Drawing.Point(612, 230);
+            this.returnDate.Name = "returnDate";
+            this.returnDate.Size = new System.Drawing.Size(174, 22);
+            this.returnDate.TabIndex = 5;
             // 
             // label
             // 
@@ -228,9 +216,9 @@ namespace travel_booking
             this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(38, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 11;
-            this.label2.Text = "From";
+            this.label2.Text = "Travel From";
             // 
             // destinationTo
             // 
@@ -246,11 +234,11 @@ namespace travel_booking
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(406, 207);
+            this.label4.Location = new System.Drawing.Point(420, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 20);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 13;
-            this.label4.Text = "To";
+            this.label4.Text = "Travel To";
             // 
             // Exit
             // 
@@ -269,9 +257,9 @@ namespace travel_booking
             this.submitt.BackColor = System.Drawing.Color.Green;
             this.submitt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.submitt.ForeColor = System.Drawing.Color.Orange;
-            this.submitt.Location = new System.Drawing.Point(799, 447);
+            this.submitt.Location = new System.Drawing.Point(320, 415);
             this.submitt.Name = "submitt";
-            this.submitt.Size = new System.Drawing.Size(121, 64);
+            this.submitt.Size = new System.Drawing.Size(142, 64);
             this.submitt.TabIndex = 15;
             this.submitt.Text = "Submitt";
             this.submitt.UseVisualStyleBackColor = false;
@@ -371,68 +359,6 @@ namespace travel_booking
             this.adultNumeric.Size = new System.Drawing.Size(169, 22);
             this.adultNumeric.TabIndex = 25;
             // 
-            // dataSum
-            // 
-            this.dataSum.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataSum.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataSum.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FromColumn,
-            this.ToColumn,
-            this.DepartDate,
-            this.ReturnDate,
-            this.ChildrenColumn,
-            this.Adults,
-            this.Total});
-            this.dataSum.Location = new System.Drawing.Point(10, 372);
-            this.dataSum.Name = "dataSum";
-            this.dataSum.Size = new System.Drawing.Size(776, 227);
-            this.dataSum.TabIndex = 26;
-            this.dataSum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSum_CellContentClick);
-            // 
-            // FromColumn
-            // 
-            this.FromColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.FromColumn.HeaderText = "From";
-            this.FromColumn.Name = "FromColumn";
-            this.FromColumn.ReadOnly = true;
-            this.FromColumn.Width = 55;
-            // 
-            // ToColumn
-            // 
-            this.ToColumn.HeaderText = "To";
-            this.ToColumn.Name = "ToColumn";
-            this.ToColumn.ReadOnly = true;
-            // 
-            // DepartDate
-            // 
-            this.DepartDate.HeaderText = "Depart Date";
-            this.DepartDate.Name = "DepartDate";
-            this.DepartDate.ReadOnly = true;
-            // 
-            // ReturnDate
-            // 
-            this.ReturnDate.HeaderText = "Return Date";
-            this.ReturnDate.Name = "ReturnDate";
-            this.ReturnDate.ReadOnly = true;
-            // 
-            // ChildrenColumn
-            // 
-            this.ChildrenColumn.HeaderText = "Children";
-            this.ChildrenColumn.Name = "ChildrenColumn";
-            this.ChildrenColumn.ReadOnly = true;
-            // 
-            // Adults
-            // 
-            this.Adults.HeaderText = "Adults";
-            this.Adults.Name = "Adults";
-            this.Adults.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total Price";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
             // userContrRegister
             // 
             this.userContrRegister.BackColor = System.Drawing.Color.Black;
@@ -454,8 +380,7 @@ namespace travel_booking
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(934, 720);
-            this.Controls.Add(this.dataSum);
+            this.ClientSize = new System.Drawing.Size(945, 720);
             this.Controls.Add(this.adultNumeric);
             this.Controls.Add(this.childrenNumeric);
             this.Controls.Add(this.sum);
@@ -472,8 +397,8 @@ namespace travel_booking
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.returnDate);
+            this.Controls.Add(this.departDate);
             this.Controls.Add(this.destinationFrom);
             this.Controls.Add(this.userContrRegister);
             this.Controls.Add(this.userContrLogin);
@@ -484,7 +409,6 @@ namespace travel_booking
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,15 +443,23 @@ namespace travel_booking
 
             decimal totalAdult,totalChild, adults, children, priceAdult, priceChild;
 
+
             adults = adultNumeric.Value;
             children = childrenNumeric.Value;
             priceAdult = 100;
             priceChild = 50;
-
             totalAdult = adults * priceAdult;
             totalChild = children * priceChild;
             TotalPrice.Text = (totalAdult + totalChild).ToString("$" + "0.00");
 
+            if (destinationFrom.SelectedIndex == -1 || destinationTo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a your departures and destination");
+                return;
+            }
+
+            if (departDate.Value >= returnDate.Value)
+                MessageBox.Show("Please choose return date later than departure date");
 
         }
 
@@ -535,5 +467,12 @@ namespace travel_booking
         {
 
         }
+
+        private void destinationFrom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+       
+        }
+
+
     }
 }

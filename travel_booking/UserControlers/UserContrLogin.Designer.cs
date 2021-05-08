@@ -220,7 +220,7 @@ namespace travel_booking
             this.Controls.Add(this.pictureBox1);
             this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "UserContrLogin";
-            this.Size = new System.Drawing.Size(752, 655);
+            this.Size = new System.Drawing.Size(782, 655);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
