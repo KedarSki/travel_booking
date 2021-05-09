@@ -58,10 +58,12 @@ namespace travel_booking
             command.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
 
             SqlDataReader reader = command.ExecuteReader();
+
             if (reader.Read() == true)
-                this.Hide();            
+                this.Hide();
             else
                 MessageBox.Show("Email or/and Password is/are invalid. Please try again");
+
 
         }
 

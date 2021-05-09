@@ -39,6 +39,8 @@ namespace travel_booking
         private Button sum;
         private NumericUpDown childrenNumeric;
         private NumericUpDown adultNumeric;
+        private PictureBox pictureBox5;
+        private Label label9;
         SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
         public MainForm()
         {
@@ -114,7 +116,7 @@ namespace travel_booking
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.destinationFrom = new System.Windows.Forms.ComboBox();
-            this.departDate = new System.Windows.Forms.DateTimePicker();
+            this.departDate = new System.Windows.Forms.DateTimePicker();    
             this.returnDate = new System.Windows.Forms.DateTimePicker();
             this.label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -134,9 +136,12 @@ namespace travel_booking
             this.adultNumeric = new System.Windows.Forms.NumericUpDown();
             this.userContrRegister = new travel_booking.UserContrRegister();
             this.userContrLogin = new travel_booking.UserContrLogin();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -377,10 +382,34 @@ namespace travel_booking
             this.userContrLogin.Size = new System.Drawing.Size(886, 760);
             this.userContrLogin.TabIndex = 1;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::travel_booking.Properties.Resources.loginPicture;
+            this.pictureBox5.Location = new System.Drawing.Point(708, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 46;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.ForeColor = System.Drawing.Color.Orange;
+            this.label9.Location = new System.Drawing.Point(755, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 20);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "label9";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(945, 720);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.adultNumeric);
             this.Controls.Add(this.childrenNumeric);
             this.Controls.Add(this.sum);
@@ -409,6 +438,7 @@ namespace travel_booking
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,8 +464,42 @@ namespace travel_booking
 
 
         private void submitt_Click(object sender, EventArgs e)
-        { 
-           
+        {
+            using (SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True"))
+            {
+                try
+                {
+
+                    using (var cmd = new SqlCommand("INSERT INTO Orders (DestFrom, DestTo, DateFrom, DateTo, Price) VALUES (@DestFrom,@DestTo,@DateFrom,@DateTo, @Price)"))
+                    {
+
+                        cmd.Connection = con;
+                        cmd.Parameters.AddWithValue("@DestFrom", destinationFrom.GetItemText(destinationFrom.SelectedItem));
+                        cmd.Parameters.AddWithValue("@DestTo", destinationTo.GetItemText(destinationTo.SelectedItem));
+                        cmd.Parameters.AddWithValue("@DateFrom", departDate.Value.Date);
+                        cmd.Parameters.AddWithValue("@DateTo", returnDate.Value.Date);
+                        cmd.Parameters.AddWithValue("@Price", TotalPrice.Text.Trim());
+
+                        con.Open();
+
+                        if (cmd.ExecuteNonQuery() > 0)
+                        {
+                            MessageBox.Show("Record inserted");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Record failed");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error during insert: " + ex.Message);
+                }
+
+  
+            }
+
         }
 
         private void sum_Click(object sender, EventArgs e)
@@ -460,8 +524,11 @@ namespace travel_booking
 
             if (departDate.Value >= returnDate.Value)
                 MessageBox.Show("Please choose return date later than departure date");
-
+            if (destinationFrom.SelectedIndex == destinationTo.SelectedIndex)
+                MessageBox.Show("Please choose different destination than departures");
         }
+
+      
 
         private void dataSum_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -471,6 +538,11 @@ namespace travel_booking
         private void destinationFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
        
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            
         }
 
 
