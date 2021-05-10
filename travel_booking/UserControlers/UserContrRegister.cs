@@ -27,7 +27,7 @@ namespace travel_booking
         InitializeComponent();
     }
 
-    public void setUserContrLogin(UserContrLogin userContrLogin)
+    public void SetUserContrLogin(UserContrLogin userContrLogin)
     {
         this.userContrLogin = userContrLogin;
     }
@@ -113,6 +113,8 @@ private void RegisterButton_Click(object sender, EventArgs e)
         txtPhone.Text = "";
         txtEmail.Text = "";
         txtPassword.Text = "";
+        txtConfirmPassword.Text = "";
+
         
 
     }
@@ -133,16 +135,5 @@ private void RegisterButton_Click(object sender, EventArgs e)
         Application.Exit();
     }
 
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void UserContrRegister_Load(object sender, EventArgs e)
-        {
-
-        }
     }
  }

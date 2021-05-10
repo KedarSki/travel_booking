@@ -128,7 +128,7 @@ namespace travel_booking
             this.txtPassword.Size = new System.Drawing.Size(205, 25);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.Text = "Password";
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
             // RegisterButton
             // 

@@ -1,4 +1,6 @@
-﻿namespace travel_booking
+﻿using System;
+
+namespace travel_booking
 {
     partial class UserContrRegister
     {
@@ -445,5 +447,8 @@
         private System.Windows.Forms.TextBox txtDateOfBirth;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private EventHandler txtFirstName_TextChanged;
+
+        public EventHandler UserContrRegister_Load { get; private set; }
     }
 }
