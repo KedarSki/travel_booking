@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DestinationsData\TravelService.cs" />
-    <Compile Include="FileOperations\FileService.cs" />
     <Compile Include="UserControlers\UserContrLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
