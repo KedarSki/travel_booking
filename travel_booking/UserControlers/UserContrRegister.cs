@@ -113,6 +113,8 @@ private void RegisterButton_Click(object sender, EventArgs e)
         txtPhone.Text = "";
         txtEmail.Text = "";
         txtPassword.Text = "";
+        txtConfirmPassword.Text = "";
+
         
 
     }
