@@ -19,7 +19,7 @@ namespace travel_booking
 
     public delegate void RegisterAction();
     UserContrLogin userContrLogin;
-        public event RegisterAction OnUserRegister;
+    public event RegisterAction OnUserRegister;
     readonly string connectionString = @"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True";
 
     public UserContrRegister()  
@@ -48,7 +48,13 @@ private void RegisterButton_Click(object sender, EventArgs e)
         sqlCommand.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
         sqlCommand.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
         sqlCommand.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
-        
+
+                if (txtConfirmPassword.Text != txtPassword.Text)
+                {
+                    MessageBox.Show("Confirm passoword is not identical to password you have provided.");
+                    txtConfirmPassword.Focus();
+                }
+                    
 
                 if (txtFirstName.Text == "")
                 {
@@ -72,7 +78,7 @@ private void RegisterButton_Click(object sender, EventArgs e)
                     txtPhone.Focus();
                 }
 
-                else if (txtEmail.Text == "" || txtEmail.Text != "@")
+                else if (txtEmail.Text == "" && txtEmail.Text != "@")
                 {
                     MessageBox.Show("Please enter Email Address");
                     txtEmail.Focus();
@@ -107,6 +113,7 @@ private void RegisterButton_Click(object sender, EventArgs e)
         txtPhone.Text = "";
         txtEmail.Text = "";
         txtPassword.Text = "";
+        
 
     }
 
