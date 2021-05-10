@@ -38,7 +38,7 @@ namespace travel_booking
         private Button sum;
         private NumericUpDown childrenNumeric;
         private NumericUpDown adultNumeric;
-        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+        readonly SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
         public MainForm()
         {
             InitializeComponent();
@@ -54,8 +54,8 @@ namespace travel_booking
             userContrMain = new UserContrMain();
             //userContrLogin = new UserContrLogin();
             //userContrRegister = new UserContrRegister();
-            userContrRegister.setUserContrLogin(userContrLogin);
-            userContrLogin.setUserContrRegister(userContrRegister);
+            userContrRegister.SetUserContrLogin(userContrLogin);
+            userContrLogin.SetUserContrRegister(userContrRegister);
             userContrRegister.OnUserRegister += UserContrRegister_OnUserRegister;
             userContrLogin.OnUserLogin += UserContrRegister_Load;
             userContrMain.SetBounds(0, 0, 886, 760);
@@ -157,7 +157,7 @@ namespace travel_booking
             this.destinationFrom.Name = "destinationFrom";
             this.destinationFrom.Size = new System.Drawing.Size(169, 24);
             this.destinationFrom.TabIndex = 3;
-            this.destinationFrom.SelectedIndexChanged += new System.EventHandler(this.destinationFrom_SelectedIndexChanged);
+            this.destinationFrom.SelectedIndexChanged += new System.EventHandler(this.DestinationFrom_SelectedIndexChanged);
             // 
             // departDate
             // 
@@ -262,7 +262,7 @@ namespace travel_booking
             this.submitt.TabIndex = 15;
             this.submitt.Text = "Submitt";
             this.submitt.UseVisualStyleBackColor = false;
-            this.submitt.Click += new System.EventHandler(this.submitt_Click);
+            this.submitt.Click += new System.EventHandler(this.Submitt_Click);
             // 
             // label5
             // 
@@ -329,7 +329,7 @@ namespace travel_booking
             this.sum.TabIndex = 23;
             this.sum.Text = "Show Total";
             this.sum.UseVisualStyleBackColor = false;
-            this.sum.Click += new System.EventHandler(this.sum_Click);
+            this.sum.Click += new System.EventHandler(this.Sum_Click);
             // 
             // childrenNumeric
             // 
@@ -432,7 +432,7 @@ namespace travel_booking
         
 
 
-        private void submitt_Click(object sender, EventArgs e)
+        private void Submitt_Click(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True"))
             {
@@ -471,7 +471,7 @@ namespace travel_booking
 
         }
 
-        private void sum_Click(object sender, EventArgs e)
+        private void Sum_Click(object sender, EventArgs e)
         {
 
             decimal totalAdult,totalChild, adults, children, priceAdult, priceChild;
@@ -499,17 +499,17 @@ namespace travel_booking
 
       
 
-        private void dataSum_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataSum_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void destinationFrom_SelectedIndexChanged(object sender, EventArgs e)
+        private void DestinationFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
        
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void Label9_Click(object sender, EventArgs e)
         {
             
         }

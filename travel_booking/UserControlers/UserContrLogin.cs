@@ -26,7 +26,7 @@ namespace travel_booking
             
         }
 
-        public void setUserContrRegister(UserContrRegister userContrRegister)
+        public void SetUserContrRegister(UserContrRegister userContrRegister)
         {
             this.userContrRegister = userContrRegister;
         }
@@ -81,7 +81,7 @@ namespace travel_booking
 
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
+        private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
