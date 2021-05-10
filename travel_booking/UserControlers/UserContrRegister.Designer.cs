@@ -40,7 +40,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.textConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.Label();
@@ -203,18 +203,18 @@
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
-            // txtConfirmPassword
+            // textConfirmPassword
             // 
-            this.txtConfirmPassword.BackColor = System.Drawing.Color.Black;
-            this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmPassword.ForeColor = System.Drawing.Color.Gold;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(369, 465);
-            this.txtConfirmPassword.Multiline = true;
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(205, 25);
-            this.txtConfirmPassword.TabIndex = 7;
-            this.txtConfirmPassword.Text = "Confirm Password";
+            this.textConfirmPassword.BackColor = System.Drawing.Color.Black;
+            this.textConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textConfirmPassword.ForeColor = System.Drawing.Color.Gold;
+            this.textConfirmPassword.Location = new System.Drawing.Point(369, 465);
+            this.textConfirmPassword.Multiline = true;
+            this.textConfirmPassword.Name = "textConfirmPassword";
+            this.textConfirmPassword.PasswordChar = '*';
+            this.textConfirmPassword.Size = new System.Drawing.Size(205, 25);
+            this.textConfirmPassword.TabIndex = 7;
+            this.textConfirmPassword.Text = "Confirm Password";
             // 
             // panel3
             // 
@@ -385,7 +385,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.Exit);
-            this.Controls.Add(this.txtConfirmPassword);
+            this.Controls.Add(this.textConfirmPassword);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.ClearAll);
@@ -429,7 +429,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Registerlabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.TextBox textConfirmPassword;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label Exit;
