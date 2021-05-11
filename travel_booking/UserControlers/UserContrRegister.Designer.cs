@@ -259,7 +259,7 @@ namespace travel_booking
             this.txtFirstName.Size = new System.Drawing.Size(205, 25);
             this.txtFirstName.TabIndex = 1;
             this.txtFirstName.Text = "First Name";
-            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
+
             // 
             // panel4
             // 
@@ -404,7 +404,6 @@ namespace travel_booking
             this.Controls.Add(this.pictureBox1);
             this.Name = "UserContrRegister";
             this.Size = new System.Drawing.Size(940, 720);
-            this.Load += new System.EventHandler(this.UserContrRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -447,8 +446,6 @@ namespace travel_booking
         private System.Windows.Forms.TextBox txtDateOfBirth;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private EventHandler txtFirstName_TextChanged;
 
-        public EventHandler UserContrRegister_Load { get; private set; }
     }
 }

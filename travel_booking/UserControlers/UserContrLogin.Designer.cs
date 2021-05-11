@@ -246,6 +246,5 @@ namespace travel_booking
         private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.Label ClearAll;
         private System.Windows.Forms.Label Exit;
-        private EventHandler loginButton_Click;
     }
 }
