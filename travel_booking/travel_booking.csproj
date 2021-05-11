@@ -116,7 +116,10 @@
   <ItemGroup>
     <Content Include="bin\Debug\travel_booking.exe" />
     <Content Include="bin\Debug\travel_booking.pdb" />
+    <None Include="Resources\date.png" />
+    <None Include="Resources\email.png" />
     <Content Include="Resources\Icon1.ico" />
+    <None Include="Resources\phone.png" />
     <Content Include="travelIcon.ico" />
     <None Include="Resources\loginPicture.png" />
     <None Include="Resources\password.png" />

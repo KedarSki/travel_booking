@@ -61,10 +61,15 @@ namespace travel_booking
 
             if (reader.Read() == true)
                 this.Hide();
+
+            else if (txtEmail.Text == "" || txtPassword.Text == "")
+            {
+                MessageBox.Show("All fields are mandatory");
+            }
+                        
             else
                 MessageBox.Show("Email or/and Password is/are invalid. Please try again");
-
-
+            
         }
 
 
@@ -96,6 +101,7 @@ namespace travel_booking
             txtEmail.Text = "";
             txtPassword.Text = "";
         }
+
     }
 
    

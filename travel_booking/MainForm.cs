@@ -38,7 +38,7 @@ namespace travel_booking
         private Button sum;
         private NumericUpDown childrenNumeric;
         private NumericUpDown adultNumeric;
-        readonly SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
         public MainForm()
         {
             InitializeComponent();
@@ -69,7 +69,7 @@ namespace travel_booking
 
         void PopulateComboDestinations()
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-T970S8AB\KEDAR;Initial Catalog=travelbooking;Integrated Security=True");
+
             SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Destinations]", connection);
             connection.Open();
             SqlDataAdapter sda = new SqlDataAdapter(command);

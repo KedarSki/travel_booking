@@ -39,33 +39,33 @@ namespace travel_booking
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Registerlabel = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtDateOfBirth = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // ClearAll
@@ -175,36 +175,6 @@ namespace travel_booking
             this.Registerlabel.TabIndex = 0;
             this.Registerlabel.Text = "REGISTER";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::travel_booking.Properties.Resources.password;
-            this.pictureBox3.Location = new System.Drawing.Point(338, 409);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::travel_booking.Properties.Resources.loginPicture;
-            this.pictureBox2.Location = new System.Drawing.Point(338, 359);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 30;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::travel_booking.Properties.Resources.travelIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(409, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.BackColor = System.Drawing.Color.Black;
@@ -225,16 +195,6 @@ namespace travel_booking
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 1);
             this.panel3.TabIndex = 42;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::travel_booking.Properties.Resources.password;
-            this.pictureBox4.Location = new System.Drawing.Point(338, 465);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 41;
-            this.pictureBox4.TabStop = false;
             // 
             // Exit
             // 
@@ -259,7 +219,6 @@ namespace travel_booking
             this.txtFirstName.Size = new System.Drawing.Size(205, 25);
             this.txtFirstName.TabIndex = 1;
             this.txtFirstName.Text = "First Name";
-
             // 
             // panel4
             // 
@@ -268,16 +227,6 @@ namespace travel_booking
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 1);
             this.panel4.TabIndex = 11;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::travel_booking.Properties.Resources.loginPicture;
-            this.pictureBox5.Location = new System.Drawing.Point(338, 164);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 45;
-            this.pictureBox5.TabStop = false;
             // 
             // txtLastName
             // 
@@ -299,16 +248,6 @@ namespace travel_booking
             this.panel5.Size = new System.Drawing.Size(236, 1);
             this.panel5.TabIndex = 49;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::travel_booking.Properties.Resources.loginPicture;
-            this.pictureBox6.Location = new System.Drawing.Point(338, 214);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 48;
-            this.pictureBox6.TabStop = false;
-            // 
             // txtPhone
             // 
             this.txtPhone.BackColor = System.Drawing.Color.Black;
@@ -328,16 +267,6 @@ namespace travel_booking
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(236, 1);
             this.panel6.TabIndex = 55;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::travel_booking.Properties.Resources.loginPicture;
-            this.pictureBox7.Location = new System.Drawing.Point(338, 311);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 54;
-            this.pictureBox7.TabStop = false;
             // 
             // txtDateOfBirth
             // 
@@ -361,25 +290,96 @@ namespace travel_booking
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::travel_booking.Properties.Resources.loginPicture;
+            this.pictureBox8.BackColor = System.Drawing.Color.Black;
+            this.pictureBox8.Image = global::travel_booking.Properties.Resources.date;
             this.pictureBox8.Location = new System.Drawing.Point(338, 264);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(25, 25);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 51;
+            this.pictureBox8.TabIndex = 56;
             this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::travel_booking.Properties.Resources.phone;
+            this.pictureBox7.Location = new System.Drawing.Point(338, 311);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 54;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::travel_booking.Properties.Resources.loginPicture;
+            this.pictureBox6.Location = new System.Drawing.Point(338, 214);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 48;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::travel_booking.Properties.Resources.loginPicture;
+            this.pictureBox5.Location = new System.Drawing.Point(338, 164);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 45;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::travel_booking.Properties.Resources.password;
+            this.pictureBox4.Location = new System.Drawing.Point(338, 465);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 41;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::travel_booking.Properties.Resources.password;
+            this.pictureBox3.Location = new System.Drawing.Point(338, 409);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 31;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::travel_booking.Properties.Resources.email;
+            this.pictureBox2.Location = new System.Drawing.Point(338, 359);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::travel_booking.Properties.Resources.travelIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(409, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
             // 
             // UserContrRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.txtDateOfBirth);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox6);
@@ -404,14 +404,14 @@ namespace travel_booking
             this.Controls.Add(this.pictureBox1);
             this.Name = "UserContrRegister";
             this.Size = new System.Drawing.Size(940, 720);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,6 +446,5 @@ namespace travel_booking
         private System.Windows.Forms.TextBox txtDateOfBirth;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox8;
-
     }
 }
