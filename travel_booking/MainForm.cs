@@ -451,6 +451,26 @@ namespace travel_booking
 
                         con.Open();
 
+
+                        if (destinationFrom.SelectedIndex == -1 || destinationTo.SelectedIndex == -1)
+                        {
+                            MessageBox.Show("Please select a your departures and destination");
+                            return;
+                        }
+
+                        if (departDate.Value >= returnDate.Value)
+                        {
+                            MessageBox.Show("Please choose return date later than departure date");
+                            con.Close();
+                        }
+                            
+                        if (destinationFrom.SelectedIndex == destinationTo.SelectedIndex)
+                        {
+                            MessageBox.Show("Please choose different destination than departures");
+                            con.Close();
+                        }
+                            
+
                         if (cmd.ExecuteNonQuery() > 0)
                         {
                             MessageBox.Show("Record inserted");
