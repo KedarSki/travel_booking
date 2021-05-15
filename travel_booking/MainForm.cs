@@ -323,9 +323,9 @@ namespace travel_booking
             this.sum.BackColor = System.Drawing.Color.Green;
             this.sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sum.ForeColor = System.Drawing.Color.Orange;
-            this.sum.Location = new System.Drawing.Point(714, 292);
+            this.sum.Location = new System.Drawing.Point(714, 304);
             this.sum.Name = "sum";
-            this.sum.Size = new System.Drawing.Size(174, 34);
+            this.sum.Size = new System.Drawing.Size(174, 27);
             this.sum.TabIndex = 23;
             this.sum.Text = "Show Total";
             this.sum.UseVisualStyleBackColor = false;
