@@ -73,7 +73,7 @@ namespace travel_booking
             this.ClearAll.AutoSize = true;
             this.ClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ClearAll.ForeColor = System.Drawing.Color.Green;
-            this.ClearAll.Location = new System.Drawing.Point(507, 499);
+            this.ClearAll.Location = new System.Drawing.Point(551, 499);
             this.ClearAll.Name = "ClearAll";
             this.ClearAll.Size = new System.Drawing.Size(67, 16);
             this.ClearAll.TabIndex = 8;
@@ -88,7 +88,7 @@ namespace travel_booking
             this.RegisterButton.FlatAppearance.BorderSize = 0;
             this.RegisterButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RegisterButton.ForeColor = System.Drawing.Color.Black;
-            this.RegisterButton.Location = new System.Drawing.Point(338, 522);
+            this.RegisterButton.Location = new System.Drawing.Point(382, 522);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(236, 37);
             this.RegisterButton.TabIndex = 9;
@@ -101,7 +101,7 @@ namespace travel_booking
             this.txtPassword.BackColor = System.Drawing.Color.Black;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.ForeColor = System.Drawing.Color.Gold;
-            this.txtPassword.Location = new System.Drawing.Point(369, 409);
+            this.txtPassword.Location = new System.Drawing.Point(413, 409);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -114,7 +114,7 @@ namespace travel_booking
             this.txtEmail.BackColor = System.Drawing.Color.Black;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.ForeColor = System.Drawing.Color.Gold;
-            this.txtEmail.Location = new System.Drawing.Point(369, 359);
+            this.txtEmail.Location = new System.Drawing.Point(413, 359);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(205, 25);
@@ -126,7 +126,7 @@ namespace travel_booking
             this.or.AutoSize = true;
             this.or.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.or.ForeColor = System.Drawing.Color.Green;
-            this.or.Location = new System.Drawing.Point(444, 562);
+            this.or.Location = new System.Drawing.Point(488, 562);
             this.or.Name = "or";
             this.or.Size = new System.Drawing.Size(30, 16);
             this.or.TabIndex = 35;
@@ -140,7 +140,7 @@ namespace travel_booking
             this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LoginButton.ForeColor = System.Drawing.Color.Black;
-            this.LoginButton.Location = new System.Drawing.Point(338, 581);
+            this.LoginButton.Location = new System.Drawing.Point(382, 581);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(236, 37);
             this.LoginButton.TabIndex = 10;
@@ -151,7 +151,7 @@ namespace travel_booking
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
-            this.panel2.Location = new System.Drawing.Point(338, 440);
+            this.panel2.Location = new System.Drawing.Point(382, 440);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 1);
             this.panel2.TabIndex = 33;
@@ -159,7 +159,7 @@ namespace travel_booking
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Green;
-            this.panel1.Location = new System.Drawing.Point(338, 390);
+            this.panel1.Location = new System.Drawing.Point(382, 390);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 32;
@@ -169,7 +169,7 @@ namespace travel_booking
             this.Registerlabel.AutoSize = true;
             this.Registerlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Registerlabel.ForeColor = System.Drawing.Color.Green;
-            this.Registerlabel.Location = new System.Drawing.Point(373, 99);
+            this.Registerlabel.Location = new System.Drawing.Point(417, 99);
             this.Registerlabel.Name = "Registerlabel";
             this.Registerlabel.Size = new System.Drawing.Size(185, 37);
             this.Registerlabel.TabIndex = 0;
@@ -180,7 +180,7 @@ namespace travel_booking
             this.txtConfirmPassword.BackColor = System.Drawing.Color.Black;
             this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfirmPassword.ForeColor = System.Drawing.Color.Gold;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(369, 465);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(413, 465);
             this.txtConfirmPassword.Multiline = true;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
@@ -191,7 +191,7 @@ namespace travel_booking
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
-            this.panel3.Location = new System.Drawing.Point(338, 496);
+            this.panel3.Location = new System.Drawing.Point(382, 496);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 1);
             this.panel3.TabIndex = 42;
@@ -201,7 +201,7 @@ namespace travel_booking
             this.Exit.AutoSize = true;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Exit.ForeColor = System.Drawing.Color.Green;
-            this.Exit.Location = new System.Drawing.Point(441, 621);
+            this.Exit.Location = new System.Drawing.Point(485, 621);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(33, 16);
             this.Exit.TabIndex = 11;
@@ -213,7 +213,7 @@ namespace travel_booking
             this.txtFirstName.BackColor = System.Drawing.Color.Black;
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFirstName.ForeColor = System.Drawing.Color.Gold;
-            this.txtFirstName.Location = new System.Drawing.Point(369, 164);
+            this.txtFirstName.Location = new System.Drawing.Point(413, 164);
             this.txtFirstName.Multiline = true;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(205, 25);
@@ -223,7 +223,7 @@ namespace travel_booking
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Green;
-            this.panel4.Location = new System.Drawing.Point(338, 195);
+            this.panel4.Location = new System.Drawing.Point(382, 195);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 1);
             this.panel4.TabIndex = 11;
@@ -233,7 +233,7 @@ namespace travel_booking
             this.txtLastName.BackColor = System.Drawing.Color.Black;
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLastName.ForeColor = System.Drawing.Color.Gold;
-            this.txtLastName.Location = new System.Drawing.Point(369, 214);
+            this.txtLastName.Location = new System.Drawing.Point(413, 214);
             this.txtLastName.Multiline = true;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(205, 25);
@@ -243,7 +243,7 @@ namespace travel_booking
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Green;
-            this.panel5.Location = new System.Drawing.Point(338, 245);
+            this.panel5.Location = new System.Drawing.Point(382, 245);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(236, 1);
             this.panel5.TabIndex = 49;
@@ -253,7 +253,7 @@ namespace travel_booking
             this.txtPhone.BackColor = System.Drawing.Color.Black;
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.ForeColor = System.Drawing.Color.Gold;
-            this.txtPhone.Location = new System.Drawing.Point(369, 311);
+            this.txtPhone.Location = new System.Drawing.Point(413, 311);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(205, 25);
@@ -263,7 +263,7 @@ namespace travel_booking
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Green;
-            this.panel6.Location = new System.Drawing.Point(338, 342);
+            this.panel6.Location = new System.Drawing.Point(382, 342);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(236, 1);
             this.panel6.TabIndex = 55;
@@ -273,7 +273,7 @@ namespace travel_booking
             this.txtDateOfBirth.BackColor = System.Drawing.Color.Black;
             this.txtDateOfBirth.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateOfBirth.ForeColor = System.Drawing.Color.Gold;
-            this.txtDateOfBirth.Location = new System.Drawing.Point(369, 264);
+            this.txtDateOfBirth.Location = new System.Drawing.Point(413, 264);
             this.txtDateOfBirth.Multiline = true;
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(205, 25);
@@ -283,7 +283,7 @@ namespace travel_booking
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Green;
-            this.panel7.Location = new System.Drawing.Point(338, 295);
+            this.panel7.Location = new System.Drawing.Point(382, 295);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(236, 1);
             this.panel7.TabIndex = 52;
@@ -292,7 +292,7 @@ namespace travel_booking
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Black;
             this.pictureBox8.Image = global::travel_booking.Properties.Resources.date;
-            this.pictureBox8.Location = new System.Drawing.Point(338, 264);
+            this.pictureBox8.Location = new System.Drawing.Point(382, 264);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(25, 25);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -302,7 +302,7 @@ namespace travel_booking
             // pictureBox7
             // 
             this.pictureBox7.Image = global::travel_booking.Properties.Resources.phone;
-            this.pictureBox7.Location = new System.Drawing.Point(338, 311);
+            this.pictureBox7.Location = new System.Drawing.Point(382, 311);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(25, 25);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -312,7 +312,7 @@ namespace travel_booking
             // pictureBox6
             // 
             this.pictureBox6.Image = global::travel_booking.Properties.Resources.loginPicture;
-            this.pictureBox6.Location = new System.Drawing.Point(338, 214);
+            this.pictureBox6.Location = new System.Drawing.Point(382, 214);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(25, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -322,7 +322,7 @@ namespace travel_booking
             // pictureBox5
             // 
             this.pictureBox5.Image = global::travel_booking.Properties.Resources.loginPicture;
-            this.pictureBox5.Location = new System.Drawing.Point(338, 164);
+            this.pictureBox5.Location = new System.Drawing.Point(382, 164);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(25, 25);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -332,7 +332,7 @@ namespace travel_booking
             // pictureBox4
             // 
             this.pictureBox4.Image = global::travel_booking.Properties.Resources.password;
-            this.pictureBox4.Location = new System.Drawing.Point(338, 465);
+            this.pictureBox4.Location = new System.Drawing.Point(382, 465);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(25, 25);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -342,7 +342,7 @@ namespace travel_booking
             // pictureBox3
             // 
             this.pictureBox3.Image = global::travel_booking.Properties.Resources.password;
-            this.pictureBox3.Location = new System.Drawing.Point(338, 409);
+            this.pictureBox3.Location = new System.Drawing.Point(382, 409);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -352,7 +352,7 @@ namespace travel_booking
             // pictureBox2
             // 
             this.pictureBox2.Image = global::travel_booking.Properties.Resources.email;
-            this.pictureBox2.Location = new System.Drawing.Point(338, 359);
+            this.pictureBox2.Location = new System.Drawing.Point(382, 359);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -362,7 +362,7 @@ namespace travel_booking
             // pictureBox1
             // 
             this.pictureBox1.Image = global::travel_booking.Properties.Resources.travelIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(409, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(453, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -402,8 +402,10 @@ namespace travel_booking
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Registerlabel);
             this.Controls.Add(this.pictureBox1);
+            this.MaximumSize = new System.Drawing.Size(1000, 700);
+            this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "UserContrRegister";
-            this.Size = new System.Drawing.Size(940, 720);
+            this.Size = new System.Drawing.Size(1000, 700);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

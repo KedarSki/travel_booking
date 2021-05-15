@@ -142,7 +142,7 @@ namespace travel_booking
             // 
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::travel_booking.Properties.Resources.travelIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(320, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(436, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(142, 107);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,7 +153,7 @@ namespace travel_booking
             // 
             this.destinationFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.destinationFrom.FormattingEnabled = true;
-            this.destinationFrom.Location = new System.Drawing.Point(10, 226);
+            this.destinationFrom.Location = new System.Drawing.Point(112, 226);
             this.destinationFrom.Name = "destinationFrom";
             this.destinationFrom.Size = new System.Drawing.Size(169, 24);
             this.destinationFrom.TabIndex = 3;
@@ -162,7 +162,7 @@ namespace travel_booking
             // departDate
             // 
             this.departDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.departDate.Location = new System.Drawing.Point(201, 228);
+            this.departDate.Location = new System.Drawing.Point(303, 228);
             this.departDate.Name = "departDate";
             this.departDate.Size = new System.Drawing.Size(169, 22);
             this.departDate.TabIndex = 4;
@@ -170,7 +170,7 @@ namespace travel_booking
             // returnDate
             // 
             this.returnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.returnDate.Location = new System.Drawing.Point(612, 230);
+            this.returnDate.Location = new System.Drawing.Point(714, 230);
             this.returnDate.Name = "returnDate";
             this.returnDate.Size = new System.Drawing.Size(174, 22);
             this.returnDate.TabIndex = 5;
@@ -180,7 +180,7 @@ namespace travel_booking
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label.ForeColor = System.Drawing.Color.Orange;
-            this.label.Location = new System.Drawing.Point(269, 140);
+            this.label.Location = new System.Drawing.Point(366, 146);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(268, 31);
             this.label.TabIndex = 6;
@@ -191,7 +191,7 @@ namespace travel_booking
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(215, 205);
+            this.label1.Location = new System.Drawing.Point(317, 205);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 8;
@@ -202,7 +202,7 @@ namespace travel_booking
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(636, 207);
+            this.label3.Location = new System.Drawing.Point(738, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 20);
             this.label3.TabIndex = 10;
@@ -213,7 +213,7 @@ namespace travel_booking
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(38, 203);
+            this.label2.Location = new System.Drawing.Point(140, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 11;
@@ -223,7 +223,7 @@ namespace travel_booking
             // 
             this.destinationTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.destinationTo.FormattingEnabled = true;
-            this.destinationTo.Location = new System.Drawing.Point(394, 228);
+            this.destinationTo.Location = new System.Drawing.Point(496, 228);
             this.destinationTo.Name = "destinationTo";
             this.destinationTo.Size = new System.Drawing.Size(199, 24);
             this.destinationTo.TabIndex = 12;
@@ -233,7 +233,7 @@ namespace travel_booking
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(420, 207);
+            this.label4.Location = new System.Drawing.Point(522, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 13;
@@ -244,7 +244,7 @@ namespace travel_booking
             this.Exit.AutoSize = true;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Exit.ForeColor = System.Drawing.Color.Green;
-            this.Exit.Location = new System.Drawing.Point(347, 676);
+            this.Exit.Location = new System.Drawing.Point(459, 617);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(68, 29);
             this.Exit.TabIndex = 14;
@@ -256,7 +256,7 @@ namespace travel_booking
             this.submitt.BackColor = System.Drawing.Color.Green;
             this.submitt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.submitt.ForeColor = System.Drawing.Color.Orange;
-            this.submitt.Location = new System.Drawing.Point(320, 415);
+            this.submitt.Location = new System.Drawing.Point(429, 460);
             this.submitt.Name = "submitt";
             this.submitt.Size = new System.Drawing.Size(142, 64);
             this.submitt.TabIndex = 15;
@@ -269,7 +269,7 @@ namespace travel_booking
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.Orange;
-            this.label5.Location = new System.Drawing.Point(38, 281);
+            this.label5.Location = new System.Drawing.Point(140, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 18;
@@ -281,7 +281,7 @@ namespace travel_booking
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.Orange;
-            this.label6.Location = new System.Drawing.Point(214, 281);
+            this.label6.Location = new System.Drawing.Point(316, 281);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 20);
             this.label6.TabIndex = 19;
@@ -290,10 +290,10 @@ namespace travel_booking
             // TotalPrice
             // 
             this.TotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TotalPrice.Location = new System.Drawing.Point(394, 292);
+            this.TotalPrice.Location = new System.Drawing.Point(496, 304);
             this.TotalPrice.Multiline = true;
             this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.Size = new System.Drawing.Size(174, 34);
+            this.TotalPrice.Size = new System.Drawing.Size(199, 22);
             this.TotalPrice.TabIndex = 20;
             // 
             // label7
@@ -301,7 +301,7 @@ namespace travel_booking
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.Color.Orange;
-            this.label7.Location = new System.Drawing.Point(406, 269);
+            this.label7.Location = new System.Drawing.Point(508, 269);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 20);
             this.label7.TabIndex = 21;
@@ -312,7 +312,7 @@ namespace travel_booking
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label8.Location = new System.Drawing.Point(14, 634);
+            this.label8.Location = new System.Drawing.Point(114, 362);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(426, 18);
             this.label8.TabIndex = 22;
@@ -323,7 +323,7 @@ namespace travel_booking
             this.sum.BackColor = System.Drawing.Color.Green;
             this.sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sum.ForeColor = System.Drawing.Color.Orange;
-            this.sum.Location = new System.Drawing.Point(593, 296);
+            this.sum.Location = new System.Drawing.Point(714, 292);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(174, 34);
             this.sum.TabIndex = 23;
@@ -334,7 +334,7 @@ namespace travel_booking
             // childrenNumeric
             // 
             this.childrenNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.childrenNumeric.Location = new System.Drawing.Point(10, 304);
+            this.childrenNumeric.Location = new System.Drawing.Point(112, 304);
             this.childrenNumeric.Maximum = new decimal(new int[] {
             10,
             0,
@@ -348,7 +348,7 @@ namespace travel_booking
             // adultNumeric
             // 
             this.adultNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.adultNumeric.Location = new System.Drawing.Point(201, 304);
+            this.adultNumeric.Location = new System.Drawing.Point(303, 304);
             this.adultNumeric.Maximum = new decimal(new int[] {
             10,
             0,
@@ -362,8 +362,10 @@ namespace travel_booking
             // 
             this.userContrRegister.BackColor = System.Drawing.Color.Black;
             this.userContrRegister.Location = new System.Drawing.Point(-12, 729);
+            this.userContrRegister.MaximumSize = new System.Drawing.Size(1000, 700);
+            this.userContrRegister.MinimumSize = new System.Drawing.Size(1000, 700);
             this.userContrRegister.Name = "userContrRegister";
-            this.userContrRegister.Size = new System.Drawing.Size(886, 760);
+            this.userContrRegister.Size = new System.Drawing.Size(1000, 700);
             this.userContrRegister.TabIndex = 2;
             this.userContrRegister.Load += new System.EventHandler(this.UserContrRegister_Load);
             // 
@@ -372,14 +374,16 @@ namespace travel_booking
             this.userContrLogin.BackColor = System.Drawing.Color.Black;
             this.userContrLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.userContrLogin.Location = new System.Drawing.Point(64, 708);
+            this.userContrLogin.MaximumSize = new System.Drawing.Size(1000, 700);
+            this.userContrLogin.MinimumSize = new System.Drawing.Size(1000, 700);
             this.userContrLogin.Name = "userContrLogin";
-            this.userContrLogin.Size = new System.Drawing.Size(886, 760);
+            this.userContrLogin.Size = new System.Drawing.Size(1000, 700);
             this.userContrLogin.TabIndex = 1;
             // 
             // MainForm
             // 
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(945, 720);
+            this.ClientSize = new System.Drawing.Size(1000, 700);
             this.Controls.Add(this.adultNumeric);
             this.Controls.Add(this.childrenNumeric);
             this.Controls.Add(this.sum);
@@ -404,7 +408,10 @@ namespace travel_booking
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1000, 700);
+            this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.childrenNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultNumeric)).EndInit();

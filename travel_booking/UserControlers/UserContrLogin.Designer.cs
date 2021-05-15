@@ -30,6 +30,7 @@ namespace travel_booking
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserContrLogin));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -51,158 +52,106 @@ namespace travel_booking
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(97, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 37);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "LOG IN";
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Green;
-            this.panel1.Location = new System.Drawing.Point(33, 219);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 1);
-            this.panel1.TabIndex = 9;
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.Green;
-            this.panel2.Location = new System.Drawing.Point(33, 301);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 1);
-            this.panel2.TabIndex = 9;
             // 
             // LoginButton
             // 
-            this.LoginButton.AutoSize = true;
+            resources.ApplyResources(this.LoginButton, "LoginButton");
             this.LoginButton.BackColor = System.Drawing.Color.Gold;
             this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.LoginButton.FlatAppearance.BorderSize = 0;
-            this.LoginButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LoginButton.ForeColor = System.Drawing.Color.Black;
-            this.LoginButton.Location = new System.Drawing.Point(33, 326);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(236, 37);
-            this.LoginButton.TabIndex = 4;
-            this.LoginButton.Text = "LOG IN";
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // or
             // 
-            this.or.AutoSize = true;
-            this.or.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            resources.ApplyResources(this.or, "or");
             this.or.ForeColor = System.Drawing.Color.Green;
-            this.or.Location = new System.Drawing.Point(140, 375);
             this.or.Name = "or";
-            this.or.Size = new System.Drawing.Size(30, 16);
-            this.or.TabIndex = 9;
-            this.or.Text = "OR";
             // 
             // txtEmail
             // 
+            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.BackColor = System.Drawing.Color.Black;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.ForeColor = System.Drawing.Color.Gold;
-            this.txtEmail.Location = new System.Drawing.Point(64, 188);
-            this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(205, 25);
-            this.txtEmail.TabIndex = 1;
-            this.txtEmail.Text = "Email";
             this.txtEmail.TextChanged += new System.EventHandler(this.TxtEmail_TextChanged);
             // 
             // txtPassword
             // 
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.BackColor = System.Drawing.Color.Black;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.ForeColor = System.Drawing.Color.Gold;
-            this.txtPassword.Location = new System.Drawing.Point(64, 270);
-            this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(205, 25);
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.Text = "Password";
             this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
             // RegisterButton
             // 
-            this.RegisterButton.AutoSize = true;
+            resources.ApplyResources(this.RegisterButton, "RegisterButton");
             this.RegisterButton.BackColor = System.Drawing.Color.Gold;
             this.RegisterButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.RegisterButton.FlatAppearance.BorderSize = 0;
-            this.RegisterButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RegisterButton.ForeColor = System.Drawing.Color.Black;
-            this.RegisterButton.Location = new System.Drawing.Point(33, 401);
             this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(236, 37);
-            this.RegisterButton.TabIndex = 5;
-            this.RegisterButton.Text = "REGISTER";
             this.RegisterButton.UseVisualStyleBackColor = false;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // ClearAll
             // 
-            this.ClearAll.AutoSize = true;
-            this.ClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            resources.ApplyResources(this.ClearAll, "ClearAll");
             this.ClearAll.ForeColor = System.Drawing.Color.Green;
-            this.ClearAll.Location = new System.Drawing.Point(193, 307);
             this.ClearAll.Name = "ClearAll";
-            this.ClearAll.Size = new System.Drawing.Size(67, 16);
-            this.ClearAll.TabIndex = 3;
-            this.ClearAll.Text = "Clear All";
             this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
             // 
             // Exit
             // 
-            this.Exit.AutoSize = true;
-            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            resources.ApplyResources(this.Exit, "Exit");
             this.Exit.ForeColor = System.Drawing.Color.Green;
-            this.Exit.Location = new System.Drawing.Point(140, 452);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(33, 16);
-            this.Exit.TabIndex = 6;
-            this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // pictureBox3
             // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Image = global::travel_booking.Properties.Resources.password;
-            this.pictureBox3.Location = new System.Drawing.Point(33, 270);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Image = global::travel_booking.Properties.Resources.loginPicture;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 188);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::travel_booking.Properties.Resources.travelIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(104, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // UserContrLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.Exit);
@@ -218,9 +167,7 @@ namespace travel_booking
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "UserContrLogin";
-            this.Size = new System.Drawing.Size(782, 655);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
